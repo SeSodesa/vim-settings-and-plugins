@@ -1,5 +1,5 @@
 " A compatibility flag for ubuntu terminal
-" Allows the arrow keys to work as in othet text editors
+" Allows the arrow keys to work as in other text editors
 set nocompatible
 
 " Allows the use of the backspace key to delete symbols across line boundaries
@@ -16,4 +16,7 @@ set numberwidth=2
 
 " Changes colorscheme
 colorscheme murphy
+
+" Removes trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
 
