@@ -15,7 +15,7 @@ set number
 set numberwidth=2
 
 " Changes colorscheme
-colorscheme murphy
+colorscheme koehler
 
 " Removes trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
