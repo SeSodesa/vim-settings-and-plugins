@@ -20,3 +20,7 @@ colorscheme murphy
 " Removes trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
+" For displaying whitespace
+set listchars=tab:>·,trail:·,extends:>,precedes:<,nbsp:␣
+set list
+
