@@ -1,3 +1,6 @@
 [submodule "pack/vendor/start/vim-latex"]
 	path = pack/vendor/start/vim-latex
 	url = git@github.com:vim-latex/vim-latex.git
+[submodule "pack/vendor/start/julia-vim"]
+	path = pack/vendor/start/julia-vim
+	url = git@github.com:JuliaEditorSupport/julia-vim.git
