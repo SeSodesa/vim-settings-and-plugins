@@ -4,6 +4,6 @@
 [submodule "pack/vendor/start/julia-vim"]
 	path = pack/vendor/start/julia-vim
 	url = git@github.com:JuliaEditorSupport/julia-vim.git
-[submodule "pack/vendor/start/onedark-vim"]
+[submodule "pack/vendor/opt/onedark.vim"]
 	path = pack/vendor/opt/onedark.vim
 	url = git@github.com:joshdick/onedark.vim.git
