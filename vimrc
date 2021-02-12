@@ -19,6 +19,7 @@ set numberwidth=2
 packadd! onedark.vim
 
 " Changes colorscheme
+syntax on
 colorscheme onedark
 
 " Activates the julia-vim unicode completions for all file types
