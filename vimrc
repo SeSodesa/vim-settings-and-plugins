@@ -18,6 +18,9 @@ set numberwidth=2
 " Activates the onedark theme
 packadd! onedark.vim
 
+" Filetype detection, indentation scripts and fietype plugins on
+filetype plugin indent on
+
 " Changes colorscheme
 syntax on
 colorscheme onedark
