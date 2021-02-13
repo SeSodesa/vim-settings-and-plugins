@@ -21,6 +21,11 @@ packadd! onedark.vim
 " Filetype detection, indentation scripts and fietype plugins on
 filetype plugin indent on
 
+" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'
+
 " Changes colorscheme
 syntax on
 colorscheme onedark
