@@ -18,7 +18,7 @@ set numberwidth=2
 " Activates the onedark theme
 packadd! onedark.vim
 
-" Filetype detection, indentation scripts and fietype plugins on
+" Filetype detection, indentation scripts and filetype plugins on
 filetype plugin indent on
 
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
