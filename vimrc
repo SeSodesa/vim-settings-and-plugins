@@ -40,3 +40,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 " For displaying whitespace
 set listchars=tab:␉·,trail:·,extends:>,precedes:<,nbsp:␣
 set list
+
+" Set file encodings to utf-8, the only acceptable encoding
+set fileencodings=utf-8
+set encoding=utf-8
