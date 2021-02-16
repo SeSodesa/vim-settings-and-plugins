@@ -10,3 +10,6 @@
 [submodule "pack/vendor/start/rust.vim"]
 	path = pack/vendor/start/rust.vim
 	url = git@github.com:rust-lang/rust.vim.git
+[submodule "pack/vendor/start/YouCompleteMe"]
+	path = pack/vendor/start/YouCompleteMe
+	url = git@github.com:ycm-core/YouCompleteMe.git
