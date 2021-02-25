@@ -44,3 +44,13 @@ set list
 " Set file encodings to utf-8, the only acceptable encoding
 set fileencodings=utf-8
 set encoding=utf-8
+
+let g:ycm_language_server =
+\ [
+\   {
+\     'name': 'rust',
+\     'cmdline': ['rust-analyzer'],
+\     'filetypes': ['rust'],
+\     'project_root_files': ['Cargo.toml']
+\   }
+\ ]
