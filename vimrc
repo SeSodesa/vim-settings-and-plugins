@@ -15,12 +15,18 @@ set number
 " Sets the width of the line number indentation
 set numberwidth=2
 
+" Shortcuts for navigating between buffers (files)
+nnoremap <C-Left> :bprev<CR>
+nnoremap <C-Right> :bnext<CR>
+nnoremap <C-j> :bprev<CR>
+nnoremap <C-k> :bnext<CR>
+
 " Activates the onedark theme
 packadd! onedark.vim
 
 " Filetype detection, indentation scripts and filetype plugins on
 filetype plugin indent on
-
+set completeopt-=preview
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
