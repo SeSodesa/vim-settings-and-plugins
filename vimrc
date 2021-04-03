@@ -2,6 +2,10 @@
 " Allows the arrow keys to work as in other text editors.
 set nocompatible
 
+" Set file encodings to utf-8, the only acceptable encoding
+set fileencodings=utf-8
+set encoding=utf-8
+
 " Prevent Vim from writing annoying swap files
 set nobackup nowritebackup
 
@@ -35,10 +39,16 @@ let g:ale_completion_enabled = 1
 filetype plugin indent on
 set completeopt-=preview
 
+" -------- LaTeX --------
+let g:latex_indent_enabled = 1
+let g:latex_fold_envs = 0
+let g:latex_fold_sections = []
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+
+" -------- Julia --------
 
 " Activates the julia-vim unicode completions for all file types
 " Warning: overrides omnifunc settings for all file types when done like this
@@ -55,7 +65,3 @@ autocmd BufWritePre * :%s/\s\+$//e
 " For displaying whitespace
 set listchars=tab:␉·,trail:·,extends:>,precedes:<,nbsp:␣
 set list
-
-" Set file encodings to utf-8, the only acceptable encoding
-set fileencodings=utf-8
-set encoding=utf-8
