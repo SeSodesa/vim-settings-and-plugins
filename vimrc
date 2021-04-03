@@ -24,21 +24,27 @@ nnoremap <C-k> :bnext<CR>
 " Activates the onedark theme
 packadd! onedark.vim
 
+" A.L.E settings
+let g:ale_rust_rls_toolchain = 'stable'
+let g:ale_completion_enabled = 1
+
 " Filetype detection, indentation scripts and filetype plugins on
 filetype plugin indent on
 set completeopt-=preview
+
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
+" Activates the julia-vim unicode completions for all file types
+" Warning: overrides omnifunc settings for all file types when done like this
+let g:latex_to_unicode_file_types = ".*"
+
 " Changes colorscheme
 syntax on
 colorscheme onedark
 
-" Activates the julia-vim unicode completions for all file types
-" Warning: overrides omnifunc settings for all file types when done like this
-let g:latex_to_unicode_file_types = ".*"
 
 " Removes trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
@@ -50,13 +56,3 @@ set list
 " Set file encodings to utf-8, the only acceptable encoding
 set fileencodings=utf-8
 set encoding=utf-8
-
-let g:ycm_language_server =
-\ [
-\   {
-\     'name': 'rust',
-\     'cmdline': ['rust-analyzer'],
-\     'filetypes': ['rust'],
-\     'project_root_files': ['Cargo.toml']
-\   }
-\ ]
