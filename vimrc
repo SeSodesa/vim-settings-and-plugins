@@ -17,6 +17,9 @@ set nowrap
 " :ls and then :b[N], where [N] is the number of a buffer.
 set hidden
 
+" Remove extra spaces after joining lines ending with '!', '?', or '.'.
+set nojoinspaces
+
 " Allows the use of the backspace key to delete symbols
 " over line boundaries.
 set backspace=indent,eol,start
