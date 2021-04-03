@@ -2,6 +2,9 @@
 " Allows the arrow keys to work as in other text editors.
 set nocompatible
 
+" Prevent Vim from writing annoying swap files
+set nobackup nowritebackup
+
 " Allows the use of the backspace key to delete symbols
 " over line boundaries.
 set backspace=indent,eol,start
