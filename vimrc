@@ -12,6 +12,11 @@ set nobackup nowritebackup
 " Prevent word wrapping
 set nowrap
 
+" Allow changing files without saving changes first.
+" The unsaved changes can still be accessed by typing
+" :ls and then :b[N], where [N] is the number of a buffer.
+set hidden
+
 " Allows the use of the backspace key to delete symbols
 " over line boundaries.
 set backspace=indent,eol,start
@@ -46,6 +51,7 @@ set completeopt-=preview
 let g:latex_indent_enabled = 1
 let g:latex_fold_envs = 0
 let g:latex_fold_sections = []
+
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
