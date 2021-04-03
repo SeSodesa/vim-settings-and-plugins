@@ -9,6 +9,9 @@ set encoding=utf-8
 " Prevent Vim from writing annoying swap files
 set nobackup nowritebackup
 
+" Prevent word wrapping
+set nowrap
+
 " Allows the use of the backspace key to delete symbols
 " over line boundaries.
 set backspace=indent,eol,start
