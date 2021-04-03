@@ -19,3 +19,6 @@
 [submodule "/home/santtu/.vim/pack/vendor/start/csv.vim"]
 	path = /home/santtu/.vim/pack/vendor/start/csv.vim
 	url = https://github.com/chrisbra/csv.vim
+[submodule "pack/vendor/start/csv"]
+	path = pack/vendor/start/csv
+	url = git@github.com:chrisbra/csv.vim.git
