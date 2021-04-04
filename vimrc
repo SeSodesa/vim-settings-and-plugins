@@ -47,10 +47,6 @@ let g:ale_linters = {'rust' : ['analyzer']}
 let g:ale_rust_rls_toolchain = 'stable'
 let g:ale_completion_enabled = 1
 
-" Filetype detection, indentation scripts and filetype plugins on
-filetype plugin indent on
-set completeopt-=preview
-
 " -------- LaTeX --------
 let g:latex_indent_enabled = 1
 let g:latex_fold_envs = 0
@@ -62,15 +58,17 @@ let g:latex_fold_sections = []
 let g:tex_flavor='latex'
 
 " -------- Julia --------
-
 " Activates the julia-vim unicode completions for all file types
 " Warning: overrides omnifunc settings for all file types when done like this
 let g:latex_to_unicode_file_types = ".*"
 
+" Filetype detection, indentation scripts and filetype plugins on
+filetype plugin indent on
+set completeopt-=preview
+
 " Changes colorscheme
 syntax on
 colorscheme onedark
-
 
 " Removes trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
