@@ -43,6 +43,7 @@ nnoremap <C-k> :bnext<CR>
 packadd! onedark.vim
 
 " A.L.E settings
+let g:ale_linters = {'rust' : ['analyzer']}
 let g:ale_rust_rls_toolchain = 'stable'
 let g:ale_completion_enabled = 1
 
