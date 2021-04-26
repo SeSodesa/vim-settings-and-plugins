@@ -7,7 +7,7 @@ set fileencodings=utf-8
 set encoding=utf-8
 
 " Prevent Vim from writing annoying swap files
-set nobackup nowritebackup
+set nobackup nowritebackup noswapfile
 
 " Prevent word wrapping
 set nowrap
@@ -46,6 +46,7 @@ packadd! onedark.vim
 let g:ale_linters = {'rust' : ['analyzer']}
 let g:ale_rust_rls_toolchain = 'stable'
 let g:ale_completion_enabled = 1
+let g:ale_cpp_cc_options = '-std=c++17 -Wall'
 
 " -------- LaTeX --------
 let g:latex_indent_enabled = 1
