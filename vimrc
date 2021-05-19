@@ -12,6 +12,9 @@ set nobackup nowritebackup noswapfile
 " Prevent word wrapping
 set nowrap
 
+" Show file title in terminal window header
+set title
+
 " Allow changing files without saving changes first.
 " The unsaved changes can still be accessed by typing
 " :ls and then :b[N], where [N] is the number of a buffer.
