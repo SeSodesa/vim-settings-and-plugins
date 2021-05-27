@@ -19,3 +19,6 @@
 [submodule "pack/vendor/start/csv"]
 	path = pack/vendor/start/csv
 	url = git@github.com:chrisbra/csv.vim.git
+[submodule "pack/vendor/opt/vim-one"]
+	path = pack/vendor/opt/vim-one
+	url = git@github.com:rakr/vim-one.git
