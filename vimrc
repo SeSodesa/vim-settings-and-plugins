@@ -42,9 +42,6 @@ nnoremap <C-Right> :bnext<CR>
 nnoremap <C-j> :bprev<CR>
 nnoremap <C-k> :bnext<CR>
 
-" Activates the onedark theme
-packadd! onedark.vim
-
 " A.L.E settings
 let g:ale_linters = {'rust' : ['analyzer']}
 let g:ale_rust_rls_toolchain = 'stable'
@@ -70,9 +67,20 @@ let g:latex_to_unicode_file_types = ".*"
 filetype plugin indent on
 set completeopt-=preview
 
-" Changes colorscheme
+" Activates the onedark theme
+" packadd! onedark.vim
+packadd! vim-one
+
+" Set syntax highlighting on
 syntax on
-colorscheme onedark
+
+" --------- Choose color theme ---------
+
+" colorscheme onedark
+colorscheme one
+
+" set background=dark " for the dark version of vim-one
+set background=light " for the light version of vim-one
 
 " Removes trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
