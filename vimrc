@@ -88,3 +88,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 " For displaying whitespace
 set listchars=tab:␉·,trail:·,extends:>,precedes:<,nbsp:␣
 set list
+
+" Change cursor  when changing modes
+let &t_SI = "\<esc>[6 q"  " blinking I-beam in insert mode
+let &t_SR = "\<esc>[3 q"  " blinking underline in replace mode
+let &t_EI = "\<esc>[2 q"  " steady block in normal mode
