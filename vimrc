@@ -59,9 +59,15 @@ let g:latex_fold_sections = []
 let g:tex_flavor='latex'
 
 " -------- Julia --------
+
 " Activates the julia-vim unicode completions for all file types
 " Warning: overrides omnifunc settings for all file types when done like this
 let g:latex_to_unicode_file_types = ".*"
+
+" --------- Javascript ---------
+
+autocmd FileType javascript setlocal sw=2 ts=2 sts=2
+autocmd FileType vue setlocal sw=2 ts=2 sts=2
 
 " Filetype detection, indentation scripts and filetype plugins on
 filetype plugin indent on
