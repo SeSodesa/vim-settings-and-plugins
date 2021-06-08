@@ -9,6 +9,11 @@ set encoding=utf-8
 " Prevent Vim from writing annoying swap files
 set nobackup nowritebackup noswapfile
 
+" Check for and reload external changes when Vim or the current buffer gains focus,
+" and optionally, auto-save when leaving focus.
+autocmd FocusGained,BufEnter * :silent! checktime
+autocmd FocusLost,WinLeave * :silent! w
+
 " Prevent word wrapping
 set nowrap
 
