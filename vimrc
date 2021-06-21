@@ -87,11 +87,19 @@ syntax on
 
 " --------- Choose color theme ---------
 
-" colorscheme onedark
-colorscheme one
+" onedark
+" colorscheme one
 
 " set background=dark " for the dark version of vim-one
-set background=light " for the light version of vim-one
+" set background=light " for the light version of vim-one
+
+set termguicolors
+
+let g:tokyonight_style = 'night'
+"let g:tokyonight_style = storm
+let g:tokyonight_enable_italic = 0
+
+colorscheme tokyonight
 
 " Removes trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e

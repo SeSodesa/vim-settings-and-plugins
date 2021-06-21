@@ -22,3 +22,6 @@
 [submodule "pack/vendor/opt/vim-one"]
 	path = pack/vendor/opt/vim-one
 	url = git@github.com:rakr/vim-one.git
+[submodule "pack/vendor/opt/tokyonight-vim"]
+	path = pack/vendor/opt/tokyonight-vim
+	url = git@github.com:ghifarit53/tokyonight-vim.git
