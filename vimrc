@@ -80,7 +80,7 @@ set completeopt-=preview
 
 " Activates the onedark theme
 " packadd! onedark.vim
-packadd! vim-one
+"packadd! vim-one
 
 " Set syntax highlighting on
 syntax on
@@ -92,7 +92,7 @@ syntax on
 
 " set background=dark " for the dark version of vim-one
 " set background=light " for the light version of vim-one
-
+packadd! tokyonight-vim
 set termguicolors
 
 let g:tokyonight_style = 'night'
