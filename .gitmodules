@@ -28,3 +28,15 @@
 [submodule "pack/plugins/start/julia-vim"]
 	path = pack/plugins/start/julia-vim
 	url = git@github.com:JuliaEditorSupport/julia-vim.git
+[submodule "pack/plugins/start/vim-vue"]
+	path = pack/plugins/start/vim-vue
+	url = git@github.com:posva/vim-vue.git
+[submodule "pack/plugins/start/yats.vim"]
+	path = pack/plugins/start/yats.vim
+	url = git@github.com:HerringtonDarkholme/yats.vim.git
+[submodule "pack/plugins/start/rust.vim"]
+	path = pack/plugins/start/rust.vim
+	url = git@github.com:rust-lang/rust.vim.git
+[submodule "pack/plugins/start/vim-javascript"]
+	path = pack/plugins/start/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
