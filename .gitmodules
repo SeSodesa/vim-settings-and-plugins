@@ -1,15 +1,9 @@
 [submodule "pack/vendor/start/vim-latex"]
 	path = pack/vendor/start/vim-latex
 	url = git@github.com:vim-latex/vim-latex.git
-[submodule "pack/vendor/start/julia-vim"]
-	path = pack/vendor/start/julia-vim
-	url = git@github.com:JuliaEditorSupport/julia-vim.git
 [submodule "pack/vendor/opt/onedark.vim"]
 	path = pack/vendor/opt/onedark.vim
 	url = git@github.com:joshdick/onedark.vim.git
-[submodule "pack/vendor/start/rust.vim"]
-	path = pack/vendor/start/rust.vim
-	url = git@github.com:rust-lang/rust.vim.git
 [submodule "pack/vendor/start/ale"]
 	path = pack/vendor/start/ale
 	url = https://github.com/dense-analysis/ale.git
@@ -28,6 +22,9 @@
 [submodule "pack/vendor/opt/sonokai"]
 	path = pack/vendor/opt/sonokai
 	url = git@github.com:sainnhe/sonokai.git
-[submodule "/home/santtu/.vim/pack/plugins/start/vim-polyglot"]
-	path = /home/santtu/.vim/pack/plugins/start/vim-polyglot
-	url = https://github.com/sheerun/vim-polyglot
+[submodule "pack/plugins/start/vim-polyglot"]
+	path = pack/plugins/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "pack/plugins/start/julia-vim"]
+	path = pack/plugins/start/julia-vim
+	url = git@github.com:JuliaEditorSupport/julia-vim.git
