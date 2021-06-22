@@ -2,7 +2,7 @@
 	path = pack/vendor/start/vim-latex
 	url = git@github.com:vim-latex/vim-latex.git
 [submodule "pack/vendor/opt/onedark.vim"]
-	path = pack/vendor/opt/onedark.vim
+	path = pack/colors/opt/onedark.vim
 	url = git@github.com:joshdick/onedark.vim.git
 [submodule "pack/vendor/start/ale"]
 	path = pack/vendor/start/ale
