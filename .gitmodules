@@ -20,7 +20,7 @@
 	path = pack/vendor/opt/tokyonight-vim
 	url = git@github.com:ghifarit53/tokyonight-vim.git
 [submodule "pack/vendor/opt/sonokai"]
-	path = pack/vendor/opt/sonokai
+	path = pack/colors/opt/sonokai
 	url = git@github.com:sainnhe/sonokai.git
 [submodule "pack/plugins/start/vim-polyglot"]
 	path = pack/plugins/start/vim-polyglot
