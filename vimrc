@@ -14,6 +14,18 @@ set nobackup nowritebackup noswapfile
 autocmd FocusGained,BufEnter * :silent! checktime
 autocmd FocusLost,WinLeave * :silent! w
 
+" For displaying whitespace
+set listchars=tab:␉·,trail:·,extends:>,precedes:<,nbsp:␣
+set list
+
+" Removes trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
+" Change cursor  when changing modes
+let &t_SI = "\<esc>[6 q"  " steady I-beam in insert mode
+let &t_SR = "\<esc>[3 q"  " steady underline in replace mode
+let &t_EI = "\<esc>[2 q"  " steady block in normal mode
+
 " Prevent word wrapping
 set nowrap
 
@@ -47,11 +59,6 @@ nnoremap <C-Right> :bnext<CR>
 nnoremap <C-j> :bprev<CR>
 nnoremap <C-k> :bnext<CR>
 
-" A.L.E settings
-let g:ale_linters = {'rust' : ['analyzer']}
-let g:ale_rust_rls_toolchain = 'stable'
-let g:ale_completion_enabled = 1
-let g:ale_cpp_cc_options = '-std=c++17 -Wall'
 
 " -------- LaTeX --------
 let g:latex_indent_enabled = 1
@@ -74,41 +81,43 @@ let g:latex_to_unicode_file_types = ".*"
 autocmd FileType javascript setlocal sw=2 ts=2 sts=2
 autocmd FileType vue setlocal sw=2 ts=2 sts=2
 
+" --------- General settings ---------
+
 " Filetype detection, indentation scripts and filetype plugins on
 filetype plugin indent on
+
+" Stop disturbing preview window from popping up
 set completeopt-=preview
 
 " Activates the onedark theme
 " packadd! onedark.vim
 "packadd! vim-one
 
-" Set syntax highlighting on
-syntax on
 
 " --------- Choose color theme ---------
 
-" onedark
-" colorscheme one
+" Set syntax highlighting on
+syntax on
 
+" → onedark
 " set background=dark " for the dark version of vim-one
 " set background=light " for the light version of vim-one
-packadd! tokyonight-vim
-set termguicolors
+" colorscheme one
 
-let g:tokyonight_style = 'night'
-"let g:tokyonight_style = storm
-let g:tokyonight_enable_italic = 0
+" → tokyonight-vim
+" packadd! tokyonight-vim
+" set termguicolors
+"let g:tokyonight_style = 'night'
+" let g:tokyonight_style = storm
+" let g:tokyonight_enable_italic = 1
+"colorscheme tokyonight
 
-colorscheme tokyonight
+" → Sonokai
+packadd! sonokai
+colorscheme sonokai
 
-" Removes trailing whitespace on save
-autocmd BufWritePre * :%s/\s\+$//e
-
-" For displaying whitespace
-set listchars=tab:␉·,trail:·,extends:>,precedes:<,nbsp:␣
-set list
-
-" Change cursor  when changing modes
-let &t_SI = "\<esc>[6 q"  " blinking I-beam in insert mode
-let &t_SR = "\<esc>[3 q"  " blinking underline in replace mode
-let &t_EI = "\<esc>[2 q"  " steady block in normal mode
+" --------- A.L.E settings ---------
+" let g:ale_linters = {'rust' : ['analyzer']}
+" let g:ale_rust_rls_toolchain = 'stable'
+" let g:ale_completion_enabled = 1
+" let g:ale_cpp_cc_options = '-std=c++17 -Wall'

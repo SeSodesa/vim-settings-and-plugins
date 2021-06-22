@@ -25,3 +25,9 @@
 [submodule "pack/vendor/opt/tokyonight-vim"]
 	path = pack/vendor/opt/tokyonight-vim
 	url = git@github.com:ghifarit53/tokyonight-vim.git
+[submodule "pack/vendor/opt/sonokai"]
+	path = pack/vendor/opt/sonokai
+	url = git@github.com:sainnhe/sonokai.git
+[submodule "/home/santtu/.vim/pack/plugins/start/vim-polyglot"]
+	path = /home/santtu/.vim/pack/plugins/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
