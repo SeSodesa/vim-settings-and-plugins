@@ -14,10 +14,10 @@
 	path = pack/vendor/start/csv
 	url = git@github.com:chrisbra/csv.vim.git
 [submodule "pack/vendor/opt/vim-one"]
-	path = pack/vendor/opt/vim-one
+	path = pack/colors/opt/vim-one
 	url = git@github.com:rakr/vim-one.git
 [submodule "pack/vendor/opt/tokyonight-vim"]
-	path = pack/vendor/opt/tokyonight-vim
+	path = pack/colors/opt/tokyonight-vim
 	url = git@github.com:ghifarit53/tokyonight-vim.git
 [submodule "pack/vendor/opt/sonokai"]
 	path = pack/colors/opt/sonokai
