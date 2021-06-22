@@ -1,6 +1,14 @@
+" --------- General settings ---------
+
 " A compatibility flag for Ubuntu terminal.
 " Allows the arrow keys to work as in other text editors.
 set nocompatible
+
+" Filetype detection, indentation scripts and filetype plugins on
+filetype plugin indent on
+
+" Stop disturbing preview window from popping up
+set completeopt-=preview
 
 " Set file encodings to utf-8, the only acceptable encoding
 set fileencodings=utf-8
@@ -81,24 +89,14 @@ let g:latex_to_unicode_file_types = ".*"
 autocmd FileType javascript setlocal sw=2 ts=2 sts=2
 autocmd FileType vue setlocal sw=2 ts=2 sts=2
 
-" --------- General settings ---------
-
-" Filetype detection, indentation scripts and filetype plugins on
-filetype plugin indent on
-
-" Stop disturbing preview window from popping up
-set completeopt-=preview
-
-" Activates the onedark theme
-" packadd! onedark.vim
-"packadd! vim-one
-
-
 " --------- Choose color theme ---------
 
 " Set syntax highlighting on
 syntax on
 
+" → onedark.vim
+" packadd! onedark.vim
+"packadd! vim-one
 " → onedark
 " set background=dark " for the dark version of vim-one
 " set background=light " for the light version of vim-one
