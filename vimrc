@@ -89,6 +89,9 @@ let g:latex_to_unicode_file_types = ".*"
 autocmd FileType javascript setlocal sw=2 ts=2 sts=2
 autocmd FileType vue setlocal sw=2 ts=2 sts=2
 
+" --------- SVG ---------
+autocmd Filetype svg setlocal sw=2 ts=2 sts=2
+
 " --------- Choose color theme ---------
 
 " Set syntax highlighting on
