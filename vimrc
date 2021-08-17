@@ -114,8 +114,12 @@ syntax on
 "colorscheme tokyonight
 
 " → Sonokai
-packadd! sonokai
-colorscheme sonokai
+" packadd! sonokai
+" colorscheme sonokai
+
+" → PaperColor
+packadd! papercolor-theme
+colorscheme PaperColor
 
 " --------- A.L.E settings ---------
 let g:ale_linters = {'rust' : ['analyzer']}
