@@ -17,6 +17,15 @@ set encoding=utf-8
 " Prevent Vim from writing annoying swap files
 set nobackup nowritebackup noswapfile
 
+" Prevent Vim from overwriting default buffer when pasting
+xnoremap  P v:register=='"'?'pgvy':'p'
+
+" Disable netrw banner
+let g:netrw_banner=0
+
+" Netrw with a tree view
+let g:netrw_liststyle=3
+
 " Check for and reload external changes when Vim or the current buffer gains focus,
 " and optionally, auto-save when leaving focus.
 autocmd FocusGained,BufEnter * :silent! checktime
@@ -114,8 +123,12 @@ syntax on
 "colorscheme tokyonight
 
 " → Sonokai
-packadd! sonokai
-colorscheme sonokai
+" packadd! sonokai
+" colorscheme sonokai
+
+" → vim-github-colorscheme
+packadd! vim-github-colorscheme
+colorscheme github
 
 " --------- A.L.E settings ---------
 let g:ale_linters = {'rust' : ['analyzer']}
