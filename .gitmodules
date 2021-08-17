@@ -46,6 +46,3 @@
 [submodule "pack/plugins/start/vim-toml"]
 	path = pack/plugins/start/vim-toml
 	url = git@github.com:cespare/vim-toml.git
-[submodule "pack/colors/opt/vim-github-colorscheme"]
-	path = pack/colors/opt/vim-github-colorscheme
-	url = git@github.com:endel/vim-github-colorscheme.git
