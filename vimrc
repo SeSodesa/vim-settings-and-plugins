@@ -119,6 +119,7 @@ syntax on
 
 " → PaperColor
 packadd! papercolor-theme
+set background=light
 colorscheme PaperColor
 
 " --------- A.L.E settings ---------
