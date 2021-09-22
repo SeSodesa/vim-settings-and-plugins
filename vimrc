@@ -23,7 +23,7 @@ autocmd FocusGained,BufEnter * :silent! checktime
 autocmd FocusLost,WinLeave * :silent! w
 
 " For displaying whitespace
-set listchars=tab:⊢−,trail:·,extends:>,precedes:<,nbsp:␣
+set listchars=tab:−−⊣,trail:·,extends:→,precedes:←,nbsp:␣
 set list
 
 " Removes trailing whitespace on save
