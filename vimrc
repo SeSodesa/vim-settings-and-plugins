@@ -30,9 +30,9 @@ set list
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Change cursor when changing modes
-let &t_SI = "\<esc>[6 q"  " steady I-beam in insert mode
-let &t_SR = "\<esc>[3 q"  " steady underline in replace mode
 let &t_EI = "\<esc>[2 q"  " steady block in normal mode
+let &t_SR = "\<esc>[3 q"  " steady underline in replace mode
+let &t_SI = "\<esc>[6 q"  " steady I-beam in insert mode
 
 " Prevent word wrapping
 set nowrap
@@ -53,7 +53,7 @@ set nojoinspaces
 set backspace=indent,eol,start
 
 " Expands tabs to 4 spaces while moving the cursor at the same time
-set tabstop=4 shiftwidth=4 " expandtab
+set tabstop=4 shiftwidth=4 noexpandtab
 
 " Displays line numbers
 set number
