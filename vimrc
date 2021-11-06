@@ -1,5 +1,9 @@
 " --------- General settings ---------
 
+" Set file encodings to utf-8, the only acceptable encoding
+set fileencodings=utf-8
+set encoding=utf-8
+
 " A compatibility flag for Ubuntu terminal.
 " Allows the arrow keys to work as in other text editors.
 set nocompatible
@@ -7,12 +11,11 @@ set nocompatible
 " Filetype detection, indentation scripts and filetype plugins on
 filetype plugin indent on
 
+" Expands tabs to 4 spaces while moving the cursor at the same time
+set tabstop=4 shiftwidth=4 noexpandtab
+
 " Stop disturbing preview window from popping up
 set completeopt-=preview
-
-" Set file encodings to utf-8, the only acceptable encoding
-set fileencodings=utf-8
-set encoding=utf-8
 
 " Prevent Vim from writing annoying swap files
 set nobackup nowritebackup noswapfile
@@ -52,9 +55,6 @@ set nojoinspaces
 " over line boundaries.
 set backspace=indent,eol,start
 
-" Expands tabs to 4 spaces while moving the cursor at the same time
-set tabstop=4 shiftwidth=4 noexpandtab
-
 " Displays line numbers
 set number
 
@@ -67,8 +67,13 @@ nnoremap <C-Right> :bnext<CR>
 nnoremap <C-j> :bprev<CR>
 nnoremap <C-k> :bnext<CR>
 
+" -------------------- Default settings for files -----------------------
+
+autocmd FileType * set tabstop=4 shiftwidth=4 noexpandtab autoindent
+
 
 " -------- LaTeX --------
+
 let g:latex_indent_enabled = 1
 let g:latex_fold_envs = 0
 let g:latex_fold_sections = []
@@ -90,6 +95,7 @@ autocmd FileType javascript setlocal sw=2 ts=2 sts=2
 autocmd FileType vue setlocal sw=2 ts=2 sts=2
 
 " --------- SVG ---------
+
 autocmd Filetype svg setlocal sw=2 ts=2 sts=2
 
 " --------- Choose color theme ---------
@@ -127,3 +133,4 @@ let g:ale_linters = {'rust' : ['analyzer']}
 let g:ale_rust_rls_toolchain = 'stable'
 let g:ale_completion_enabled = 1
 let g:ale_cpp_cc_options = '-std=c++17 -Wall'
+let g:ale_enabled = 0
