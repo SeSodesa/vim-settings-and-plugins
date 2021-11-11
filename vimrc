@@ -1,4 +1,5 @@
-" --------- General settings ---------
+" -----------------------------------------------------------------------------
+" General settings
 
 " Set file encodings to utf-8, the only acceptable encoding
 set fileencodings=utf-8
@@ -67,12 +68,14 @@ nnoremap <C-Right> :bnext<CR>
 nnoremap <C-j> :bprev<CR>
 nnoremap <C-k> :bnext<CR>
 
-" -------------------- Default settings for files -----------------------
+" -----------------------------------------------------------------------------
+" Default settings for files
 
 autocmd FileType * set tabstop=4 shiftwidth=4 noexpandtab autoindent
 
 
-" -------- LaTeX --------
+" -----------------------------------------------------------------------------
+" LaTeX
 
 let g:latex_indent_enabled = 1
 let g:latex_fold_envs = 0
@@ -83,22 +86,26 @@ let g:latex_fold_sections = []
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
-" -------- Julia --------
+" -----------------------------------------------------------------------------
+" Julia
 
 " Activates the julia-vim unicode completions for all file types
 " Warning: overrides omnifunc settings for all file types when done like this
 let g:latex_to_unicode_file_types = ".*"
 
-" --------- Javascript ---------
+" -----------------------------------------------------------------------------
+" Javascript
 
 autocmd FileType javascript setlocal sw=2 ts=2 sts=2
 autocmd FileType vue setlocal sw=2 ts=2 sts=2
 
-" --------- SVG ---------
+" -----------------------------------------------------------------------------
+" SVG
 
 autocmd Filetype svg setlocal sw=2 ts=2 sts=2
 
-" --------- Choose color theme ---------
+" -----------------------------------------------------------------------------
+" Choose color theme
 
 " Set syntax highlighting on
 syntax on
@@ -128,9 +135,30 @@ packadd! papercolor-theme
 set background=light
 colorscheme PaperColor
 
-" --------- A.L.E settings ---------
+" -----------------------------------------------------------------------------
+" A.L.E
+
 let g:ale_linters = {'rust' : ['analyzer']}
 let g:ale_rust_rls_toolchain = 'stable'
 let g:ale_completion_enabled = 1
 let g:ale_cpp_cc_options = '-std=c++17 -Wall'
 let g:ale_enabled = 0
+
+" -----------------------------------------------------------------------------
+" Netrw
+
+" Keep the current directory and the browsing directory synced.
+
+let g:netrw_keepdir = 0
+
+" Change the size in % of the Netrw window when it creates a split.
+
+let g:netrw_winsize = 30
+
+" Hide the banner. To show it, use I inside Netrw.
+
+let g:netrw_banner = 0
+
+" Hide dotfiles on load.
+
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
