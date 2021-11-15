@@ -190,3 +190,5 @@ endfunction
 command! -range Arcs :call Surround("(", ")")
 command! -range Squares :call Surround("[", "]")
 command! -range Angles :call Surround("⟨", "⟩")
+command! -range Waves :call Surround("{", "}")
+command! -range Set :call Surround("{", "}")
