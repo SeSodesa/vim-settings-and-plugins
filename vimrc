@@ -166,3 +166,27 @@ let g:netrw_banner = 0
 " Hide dotfiles on load.
 
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+
+" -----------------------------------------------------------------------------
+" Functions and their key mappings
+
+vnoremap <F3> :call Surround("(", ")")<Enter>
+
+" Surrounds visually selected text with a given prefix and postfix.
+function! Surround(prefix, postfix)
+    " get the selection
+    let selection = @*
+    " remove selected text
+    normal gv"xx
+    " inserting text with prefix and postfix
+    execute "normal i" . a:prefix . selection . a:postfix
+endfunction
+
+" -----------------------------------------------------------------------------
+" Surround commands
+"
+" These utilize the function Surround defined above.
+
+command! -range Arcs :call Surround("(", ")")
+command! -range Squares :call Surround("[", "]")
+command! -range Angles :call Surround("⟨", "⟩")
