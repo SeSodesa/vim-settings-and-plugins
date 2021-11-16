@@ -8,7 +8,7 @@ Installation is done by cloning this directory under `~/.vim` with
 ```sh
 git clone uri/of/repository.git ~/.vim --recursive
 cd ~/.vim
-git submodule update
+git submodule update --init --recursive
 ```
 and then creating a symbolic link to the file `~/.vim/vimrc` with
 ```sh
