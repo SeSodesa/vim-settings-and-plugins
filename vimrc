@@ -119,21 +119,21 @@ syntax on
 " colorscheme one
 
 " → tokyonight-vim
-" packadd! tokyonight-vim
-" set termguicolors
+packadd! tokyonight-vim
+set termguicolors
 "let g:tokyonight_style = 'night'
-" let g:tokyonight_style = storm
-" let g:tokyonight_enable_italic = 1
-"colorscheme tokyonight
+let g:tokyonight_style = 'storm'
+let g:tokyonight_enable_italic = 1
+colorscheme tokyonight
 
 " → Sonokai
 " packadd! sonokai
 " colorscheme sonokai
 
 " → PaperColor
-packadd! papercolor-theme
-set background=light
-colorscheme PaperColor
+" packadd! papercolor-theme
+" set background=light
+" colorscheme PaperColor
 
 " -----------------------------------------------------------------------------
 " A.L.E
