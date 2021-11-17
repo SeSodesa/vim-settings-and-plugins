@@ -1,4 +1,4 @@
-" -----------------------------------------------------------------------------
+" =============================================================================
 " General settings
 
 " Set file encodings to utf-8, the only acceptable encoding
@@ -21,8 +21,8 @@ set completeopt-=preview
 " Prevent Vim from writing annoying swap files
 set nobackup nowritebackup noswapfile
 
-" Check for and reload external changes when Vim or the current buffer gains focus,
-" and optionally, auto-save when leaving focus.
+" Check for and reload external changes when Vim or the current buffer gains
+" focus, and optionally, auto-save when leaving focus.
 autocmd FocusGained,BufEnter * :silent! checktime
 autocmd FocusLost,WinLeave * :silent! w
 
@@ -44,9 +44,9 @@ set nowrap
 " Show file title in terminal window header
 set title
 
-" Allow changing files without saving changes first.
-" The unsaved changes can still be accessed by typing
-" :ls and then :b[N], where [N] is the number of a buffer.
+" Allow changing files without saving changes first. The unsaved changes can
+" still be accessed by typing :ls and then :b[N], where [N] is the number of a
+" buffer.
 set hidden
 
 " Remove extra spaces after joining lines ending with '!', '?', or '.'.
@@ -61,6 +61,9 @@ set number
 
 " Sets the width of the line number indentation
 set numberwidth=2
+
+" Show row and column in status bar
+set ruler
 
 " Shortcuts for navigating between buffers (files)
 nnoremap <C-Left> :bprev<CR>
