@@ -62,8 +62,11 @@ set number
 " Sets the width of the line number indentation
 set numberwidth=2
 
-" Show row and column in status bar
-set ruler
+" Show file, row and column in status bar
+set statusline+=%F\ ∣\ %l\ \:\ %c
+
+" Always show status bar
+set laststatus=2
 
 " Shortcuts for navigating between buffers (files)
 nnoremap <C-Left> :bprev<CR>
