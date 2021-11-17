@@ -105,6 +105,11 @@ autocmd FileType vue setlocal sw=2 ts=2 sts=2
 autocmd Filetype svg setlocal sw=2 ts=2 sts=2
 
 " -----------------------------------------------------------------------------
+" JSON
+
+autocmd Filetype json setlocal sw=2 ts=2 sts=2
+
+" -----------------------------------------------------------------------------
 " Choose color theme
 
 " Set syntax highlighting on
