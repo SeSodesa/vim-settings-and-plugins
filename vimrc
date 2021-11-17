@@ -186,7 +186,7 @@ vnoremap <F3> :call Surround("(", ")")<Enter>
 " Surrounds visually selected text with a given prefix and postfix.
 function! Surround(prefix, postfix)
 	" get the selection
-	let selection = @*
+	let selection = GetVisualSelection()
 	" remove selected text
 	normal gv"xx
 	" inserting text with prefix and postfix
@@ -196,7 +196,7 @@ endfunction
 " Surrounds visually selected text
 function! TitleFunction(prefixchar, postfixchar="", linewidth=80)
 	" Get the selection and calculate lengths
-	let selection = @*
+	let selection = GetVisualSelection()
 	let selection_length = strlen(selection)
 	let titlebar_length = (a:linewidth - selection_length - 2) / 2
 	" Set the postfix character if it has not been set by the user
@@ -223,6 +223,21 @@ function! TitleFunction(prefixchar, postfixchar="", linewidth=80)
 	\)
 	" inserting text with prefix and postfix
 	execute "normal i" . title
+endfunction
+
+" Retrieves the contents of a visual selection.
+" Taken from https://groups.google.com/g/vim_use/c/ZaPC6p947_M/m/3gB-HdCKmd8J
+" and renamed
+function! GetVisualSelection() range
+	let reg_save = getreg('"')
+	let regtype_save = getregtype('"')
+	let cb_save = &clipboard
+	set clipboard&
+	normal! ""gvy
+	let selection = getreg('"')
+	call setreg('"', reg_save, regtype_save)
+	let &clipboard = cb_save
+	return selection
 endfunction
 
 " -----------------------------------------------------------------------------
