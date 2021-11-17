@@ -193,6 +193,38 @@ function! Surround(prefix, postfix)
 	execute "normal i" . a:prefix . selection . a:postfix
 endfunction
 
+" Surrounds visually selected text
+function! TitleFunction(prefixchar, postfixchar="", linewidth=80)
+	" Get the selection and calculate lengths
+	let selection = @*
+	let selection_length = strlen(selection)
+	let titlebar_length = (a:linewidth - selection_length - 2) / 2
+	" Set the postfix character if it has not been set by the user
+	if a:postfixchar ==# ""
+		let postfixchar = a:prefixchar
+	else
+		let postfixchar = a:postfixchar
+	endif
+	" Two more lengths
+	let prefix_repetitions = titlebar_length / strlen(a:prefixchar)
+	let postfix_repetitions = titlebar_length / strlen(postfixchar)
+	" remove selected text
+	normal gv"xx
+	" Generate title string
+	let title = join(
+		\[
+			\repeat(a:prefixchar, prefix_repetitions),
+			\" ",
+			\selection,
+			\" ",
+			\repeat(postfixchar, postfix_repetitions)
+		\],
+		\""
+	\)
+	" inserting text with prefix and postfix
+	execute "normal i" . title
+endfunction
+
 " -----------------------------------------------------------------------------
 " Surround commands
 "
@@ -203,3 +235,4 @@ command! -range Squares :call Surround("[", "]")
 command! -range Angles :call Surround("⟨", "⟩")
 command! -range Waves :call Surround("{", "}")
 command! -range Set :call Surround("{", "}")
+command! -nargs=* -range Title :call TitleFunction("-")
