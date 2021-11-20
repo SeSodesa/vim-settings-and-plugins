@@ -191,21 +191,37 @@ function! Surround(prefix, postfix)
 	execute "normal i" . a:prefix . selection . a:postfix
 endfunction
 
-" Surrounds visually selected text
-function! TitleFunction(prefixchar, postfixchar="", linewidth=&textwidth)
+" Surrounds visually selected text with titing lines,
+" until the
+"
+"
+function! TitleFunction(...)
+	let nargs = a:0
+	if nargs > 3
+		echom "TitleFunction only takes 3 arguments at most…"
+		return
+	endif
+	" Set needed values
+	let prefixchar = "─"
+	let postfixchar = prefixchar
+	let linewidth=&textwidth
+	" Reset them if values were given
+	if nargs >= 1
+		let prefixchar = a:1
+	endif
+	if nargs >= 2
+		let postfixchar = a:2
+	endif
+	if nargs == 3
+		let linewidth = a:3
+	endif
 	" Get the selection and calculate lengths
 	let selection = GetVisualSelection()
-	let selection_length = strlen(selection)
-	let titlebar_length = (a:linewidth - selection_length - 2) / 2
-	" Set the postfix character if it has not been set by the user
-	if a:postfixchar ==# ""
-		let postfixchar = a:prefixchar
-	else
-		let postfixchar = a:postfixchar
-	endif
+	let selection_length = strchars(selection)
+	let titlebar_length = (linewidth - selection_length - 2) / 2
 	" Two more lengths
-	let prefix_repetitions = titlebar_length / strlen(a:prefixchar)
-	let postfix_repetitions = titlebar_length / strlen(postfixchar)
+	let prefix_repetitions = titlebar_length / strchars(prefixchar)
+	let postfix_repetitions = titlebar_length / strchars(postfixchar)
 	" Check for emptiness of current an previous lines
 	let current_line = getcurpos()[1]
 	let prev_line_empty = trim(getline(current_line - 1)) == ""
@@ -216,7 +232,7 @@ function! TitleFunction(prefixchar, postfixchar="", linewidth=&textwidth)
 	let title = join(
 		\[
 			\prev_line_empty ? "" : "\r",
-			\repeat(a:prefixchar, prefix_repetitions),
+			\repeat(prefixchar, prefix_repetitions),
 			\" ",
 			\selection,
 			\" ",
@@ -229,9 +245,8 @@ function! TitleFunction(prefixchar, postfixchar="", linewidth=&textwidth)
 	execute "normal i" . title
 endfunction
 
-" Retrieves the contents of a visual selection.
-" Taken from https://groups.google.com/g/vim_use/c/ZaPC6p947_M/m/3gB-HdCKmd8J
-" and renamed
+" Retrieves the contents of a visual selection. Taken from
+" https://groups.google.com/g/vim_use/c/ZaPC6p947_M/m/3gB-HdCKmd8J and renamed
 function! GetVisualSelection() range
 	let reg_save = getreg('"')
 	let regtype_save = getregtype('"')
@@ -254,4 +269,4 @@ command! -range Squares :call Surround("[", "]")
 command! -range Angles :call Surround("⟨", "⟩")
 command! -range Waves :call Surround("{", "}")
 command! -range Set :call Surround("{", "}")
-command! -nargs=* -range Title :call TitleFunction("-")
+command! -nargs=* -range Title :call TitleFunction(<f-args>)
