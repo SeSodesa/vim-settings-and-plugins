@@ -192,9 +192,13 @@ function! Surround(prefix, postfix)
 endfunction
 
 " Surrounds visually selected text with titing lines,
-" until the
+" until the there are enough Unicode characters to will
+" the current line width.
 "
-"
+" Parameters:
+" 	a:1 ↦ prefix string
+" 	a:2 ↦ postfix string
+" 	a:1 ↦ line width
 function! TitleFunction(...)
 	let nargs = a:0
 	if nargs > 3
