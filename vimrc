@@ -75,7 +75,7 @@ nnoremap <C-k> :bnext<CR>
 " -----------------------------------------------------------------------------
 " Default settings for files
 
-autocmd FileType * set tabstop=4 shiftwidth=4 noexpandtab autoindent
+autocmd FileType * set tabstop=4 shiftwidth=4 noexpandtab autoindent textwidth=78
 
 
 " -----------------------------------------------------------------------------
