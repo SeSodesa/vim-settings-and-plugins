@@ -1,7 +1,5 @@
 " =============================================================================
 " General settings
-
-" Set file encodings to utf-8, the only acceptable encoding
 set fileencodings=utf-8
 set encoding=utf-8
 
@@ -194,7 +192,7 @@ function! Surround(prefix, postfix)
 endfunction
 
 " Surrounds visually selected text
-function! TitleFunction(prefixchar, postfixchar="", linewidth=80)
+function! TitleFunction(prefixchar, postfixchar="", linewidth=&textwidth)
 	" Get the selection and calculate lengths
 	let selection = GetVisualSelection()
 	let selection_length = strlen(selection)
@@ -213,11 +211,13 @@ function! TitleFunction(prefixchar, postfixchar="", linewidth=80)
 	" Generate title string
 	let title = join(
 		\[
+			\"\r",
 			\repeat(a:prefixchar, prefix_repetitions),
 			\" ",
 			\selection,
 			\" ",
-			\repeat(postfixchar, postfix_repetitions)
+			\repeat(postfixchar, postfix_repetitions),
+			\"\r",
 		\],
 		\""
 	\)
