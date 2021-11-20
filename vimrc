@@ -206,18 +206,22 @@ function! TitleFunction(prefixchar, postfixchar="", linewidth=&textwidth)
 	" Two more lengths
 	let prefix_repetitions = titlebar_length / strlen(a:prefixchar)
 	let postfix_repetitions = titlebar_length / strlen(postfixchar)
+	" Check for emptiness of current an previous lines
+	let current_line = getcurpos()[1]
+	let prev_line_empty = trim(getline(current_line - 1)) == ""
+	let next_line_empty = trim(getline(current_line + 1)) == ""
 	" remove selected text
 	normal gv"xx
 	" Generate title string
 	let title = join(
 		\[
-			\"\r",
+			\prev_line_empty ? "" : "\r",
 			\repeat(a:prefixchar, prefix_repetitions),
 			\" ",
 			\selection,
 			\" ",
 			\repeat(postfixchar, postfix_repetitions),
-			\"\r",
+			\next_line_empty ? "" : "\r",
 		\],
 		\""
 	\)
