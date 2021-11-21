@@ -156,9 +156,9 @@ let g:ale_enabled = 0
 " -----------------------------------------------------------------------------
 " Netrw
 
-" Use tree style directory view
+" Use list style directory view
 
-let g:netrw_liststyle = 3
+let g:netrw_liststyle = 1
 
 " Keep the current directory and the browsing directory synced.
 
