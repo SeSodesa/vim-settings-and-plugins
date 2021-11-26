@@ -220,7 +220,7 @@ function! TitleFunction(...)
 		let linewidth = a:3
 	endif
 	" Get the selection and calculate lengths
-	let selection = GetVisualSelection()
+	let selection = trim(GetVisualSelection())
 	let selection_length = strchars(selection)
 	let titlebar_length = (linewidth - selection_length - 2) / 2
 	" Two more lengths
