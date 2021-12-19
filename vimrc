@@ -274,3 +274,7 @@ command! -range Angles :call Surround("⟨", "⟩")
 command! -range Waves :call Surround("{", "}")
 command! -range Set :call Surround("{", "}")
 command! -nargs=* -range Title :call TitleFunction(<f-args>)
+
+" Emojis
+"
+command! Shrug :normal a¯\_(ツ)_/¯<ESC>
