@@ -72,6 +72,14 @@ nnoremap <C-Right> :bnext<CR>
 nnoremap <C-j> :bprev<CR>
 nnoremap <C-k> :bnext<CR>
 
+" Allow moving the cursor to arbitrary positions in a buffer, even outside of
+" typed characters, in all states.
+
+set virtualedit=all
+
+" To supplement virtualedit, prevent move to start of line at screen switch
+set nostartofline
+
 " -----------------------------------------------------------------------------
 " Default settings for files
 
@@ -208,7 +216,7 @@ function! TitleFunction(...)
 	" Set needed values
 	let prefixchar = "─"
 	let postfixchar = prefixchar
-	let linewidth=&textwidth
+	let linewidth = &textwidth
 	" Reset them if values were given
 	if nargs >= 1
 		let prefixchar = a:1
@@ -219,17 +227,19 @@ function! TitleFunction(...)
 	if nargs == 3
 		let linewidth = a:3
 	endif
+	" Check for emptiness of current an previous lines
+	let current_line = getcurpos()[1]
+	let prev_line_empty = empty(trim(getline(current_line - 1)))
+	let next_line_empty = empty(trim(getline(current_line + 1)))
 	" Get the selection and calculate lengths
-	let selection = trim(GetVisualSelection())
+	let selection = GetVisualSelection()
+	let newline_ends_selection = selection =~ "\r\+$"
+	let selection = (trim(substitute(selection, '\r\+', ' ', "g")))
 	let selection_length = strchars(selection)
 	let titlebar_length = (linewidth - selection_length - 2) / 2
 	" Two more lengths
 	let prefix_repetitions = titlebar_length / strchars(prefixchar)
 	let postfix_repetitions = titlebar_length / strchars(postfixchar)
-	" Check for emptiness of current an previous lines
-	let current_line = getcurpos()[1]
-	let prev_line_empty = trim(getline(current_line - 1)) == ""
-	let next_line_empty = trim(getline(current_line + 1)) == ""
 	" remove selected text
 	normal gv"xx
 	" Generate title string
@@ -242,6 +252,7 @@ function! TitleFunction(...)
 			\" ",
 			\repeat(postfixchar, postfix_repetitions),
 			\next_line_empty ? "" : "\r",
+			\newline_ends_selection ? "\r" : ""
 		\],
 		\""
 	\)
