@@ -75,7 +75,7 @@ nnoremap <C-k> :bnext<CR>
 " Allow moving the cursor to arbitrary positions in a buffer, even outside of
 " typed characters, in all states.
 
-set virtualedit=all
+set virtualedit=none
 
 " To supplement virtualedit, prevent move to start of line at screen switch
 set nostartofline
@@ -166,7 +166,7 @@ let g:ale_enabled = 0
 
 " Use list style directory view
 
-let g:netrw_liststyle = 1
+let g:netrw_liststyle = 0
 
 " Keep the current directory and the browsing directory synced.
 
