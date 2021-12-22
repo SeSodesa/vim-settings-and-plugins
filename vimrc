@@ -75,10 +75,14 @@ nnoremap <C-k> :bnext<CR>
 " Allow moving the cursor to arbitrary positions in a buffer, even outside of
 " typed characters, in all states.
 
-set virtualedit=none
+set virtualedit=
 
 " To supplement virtualedit, prevent move to start of line at screen switch
 set nostartofline
+
+" Prevent line breaks in the middle of words
+
+set linebreak
 
 " -----------------------------------------------------------------------------
 " Default settings for files
