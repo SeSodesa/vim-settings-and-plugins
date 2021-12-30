@@ -1,63 +1,80 @@
 " =============================================================================
 " General settings
+
 set fileencodings=utf-8
 set encoding=utf-8
 
 " A compatibility flag for Ubuntu terminal.
 " Allows the arrow keys to work as in other text editors.
+
 set nocompatible
 
 " Filetype detection, indentation scripts and filetype plugins on
+
 filetype plugin indent on
 
 " Expands tabs to 4 spaces while moving the cursor at the same time
+
 set tabstop=4 shiftwidth=4 noexpandtab
 
 " Stop disturbing preview window from popping up
+
 set completeopt-=preview
 
 " Prevent Vim from writing annoying swap files
+
 set nobackup nowritebackup noswapfile
 
 " Check for and reload external changes when Vim or the current buffer gains
 " focus, and optionally, auto-save when leaving focus.
+
 autocmd FocusGained,BufEnter * :silent! checktime
 autocmd FocusLost,WinLeave * :silent! w
 
 " For displaying whitespace
+
 set listchars=tab:──┤,trail:·,extends:→,precedes:←,nbsp:␣
 set list
 
 " Removes trailing whitespace on save
+
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Change cursor when changing modes
+
 let &t_EI = "\<esc>[2 q"  " steady block in normal mode
 let &t_SR = "\<esc>[3 q"  " steady underline in replace mode
 let &t_SI = "\<esc>[6 q"  " steady I-beam in insert mode
 
 " Prevent word wrapping
+
 set nowrap
 
 " Show file title in terminal window header
+
 set title
 
 " Allow changing files without saving changes first. The unsaved changes can
 " still be accessed by typing :ls and then :b[N], where [N] is the number of a
 " buffer.
+
 set hidden
 
 " Remove extra spaces after joining lines ending with '!', '?', or '.'.
+
 set nojoinspaces
 
 " Allows the use of the backspace key to delete symbols
 " over line boundaries.
+
 set backspace=indent,eol,start
 
 " Displays line numbers
+
 set number
 
 " Sets the width of the line number indentation
+
 set numberwidth=2
 
 " Show file, row and column in status bar
@@ -67,6 +84,7 @@ set statusline+=%F\ ∣\ %l\ \:\ %c
 set laststatus=2
 
 " Shortcuts for navigating between buffers (files)
+
 nnoremap <C-Left> :bprev<CR>
 nnoremap <C-Right> :bnext<CR>
 nnoremap <C-j> :bprev<CR>
@@ -78,6 +96,7 @@ nnoremap <C-k> :bnext<CR>
 set virtualedit=
 
 " To supplement virtualedit, prevent move to start of line at screen switch
+
 set nostartofline
 
 " Prevent line breaks in the middle of words
@@ -107,6 +126,7 @@ let g:tex_flavor='latex'
 
 " Activates the julia-vim unicode completions for all file types
 " Warning: overrides omnifunc settings for all file types when done like this
+
 let g:latex_to_unicode_file_types = ".*"
 
 " -----------------------------------------------------------------------------
@@ -129,6 +149,7 @@ autocmd Filetype json setlocal sw=2 ts=2 sts=2
 " Choose color theme
 
 " Set syntax highlighting on
+
 syntax on
 
 " → onedark.vim
@@ -291,5 +312,5 @@ command! -range Set :call Surround("{", "}")
 command! -nargs=* -range Title :call TitleFunction(<f-args>)
 
 " Emojis
-"
+
 command! Shrug :normal a¯\_(ツ)_/¯<ESC>
