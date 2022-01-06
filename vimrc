@@ -38,7 +38,18 @@ set list
 
 " Removes trailing whitespace on save
 
-autocmd BufWritePre * :%s/\s\+$//e
+function! Preserve(command)
+	" Save last search, and cursor position.
+	let _s=@/
+	let pos = getpos(".")
+	" Execute input command
+	execute a:command
+	" Clean up: restore previous search history, and cursor position
+	let @/=_s
+	call setpos(".", pos)
+endfunction
+
+autocmd BufWritePre * call Preserve("%s/\\s\\+$//e")
 
 " Change cursor when changing modes
 
