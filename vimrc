@@ -36,17 +36,15 @@ autocmd FocusLost,WinLeave * :silent! w
 set listchars=tab:──┤,trail:·,extends:→,precedes:←,nbsp:␣
 set list
 
-" Removes trailing whitespace on save
+" Removes trailing whitespace on save, preserving cursor state
 
 function! Preserve(command)
-	" Save last search, and cursor position.
-	let _s=@/
-	let pos = getpos(".")
-	" Execute input command
-	execute a:command
-	" Clean up: restore previous search history, and cursor position
-	let @/=_s
-	call setpos(".", pos)
+	" Save current view.
+	let current_view = winsaveview()
+	" Execute input command without modifying command history
+	keeppatterns execute a:command
+	" Restore previous search history, and cursor position
+	call winrestview(current_view)
 endfunction
 
 autocmd BufWritePre * call Preserve("%s/\\s\\+$//e")
