@@ -139,6 +139,12 @@ let g:latex_fold_sections = []
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
+" Disable all LaTeΧ code folding
+
+:let Tex_FoldedSections=""
+:let Tex_FoldedEnvironments=""
+:let Tex_FoldedMisc=""
+
 " -----------------------------------------------------------------------------
 " Julia
 
