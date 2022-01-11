@@ -1,6 +1,8 @@
 " =============================================================================
 " General settings
 
+" Set encoding to the one to rule them all
+
 set fileencodings=utf-8
 set encoding=utf-8
 
@@ -111,6 +113,13 @@ set nostartofline
 " Prevent line breaks in the middle of words
 
 set linebreak
+
+" Set movement to happen per screen-line when line wrapping is on
+
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
+nnoremap <expr> <Down> v:count ? 'j' : 'gj'
+nnoremap <expr> <Up> v:count ? 'k' : 'gk'
 
 " -----------------------------------------------------------------------------
 " Default settings for files
