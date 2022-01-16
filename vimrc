@@ -120,6 +120,8 @@ nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'
 nnoremap <expr> <Down> v:count ? 'j' : 'gj'
 nnoremap <expr> <Up> v:count ? 'k' : 'gk'
+inoremap <expr> <Down> v:count ? '<Down>' : '<C-o>gj'
+inoremap <expr> <Up> v:count ? '<Up>' : '<C-o>gk'
 
 " -----------------------------------------------------------------------------
 " Default settings for files
