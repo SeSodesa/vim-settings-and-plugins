@@ -52,3 +52,6 @@
 [submodule "pack/plugins/start/vim-syntax-clingo"]
 	path = pack/plugins/start/vim-syntax-clingo
 	url = git@github.com:rkaminsk/vim-syntax-clingo.git
+[submodule "pack/plugins/start/vim-matlab"]
+	path = pack/plugins/start/vim-matlab
+	url = git@github.com:andymass/vim-matlab.git
