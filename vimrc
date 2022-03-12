@@ -92,8 +92,7 @@ set numberwidth=2
 
 set statusline=
 set statusline+=%#CursorColumn#
-set statusline+=\ %F
-set statusline+=%m\
+set statusline+=%F
 set statusline+=%=
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
