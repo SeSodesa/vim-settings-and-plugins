@@ -88,8 +88,17 @@ set number
 
 set numberwidth=2
 
-" Show file, row and column in status bar
-set statusline+=%F\ ∣\ %l\ \:\ %c
+" Show status bar with the color of CursorColumn
+
+set statusline=
+set statusline+=%#CursorColumn#
+set statusline+=\ %F
+set statusline+=%m\
+set statusline+=%=
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
 
 " Always show status bar
 set laststatus=2
