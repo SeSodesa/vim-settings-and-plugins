@@ -94,7 +94,7 @@ set statusline=
 set statusline+=%#CursorColumn#
 set statusline+=%F
 set statusline+=%=
-set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\[%{&fileencoding?&fileencoding:&encoding}\]
 set statusline+=\[%{&fileformat}\]
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
