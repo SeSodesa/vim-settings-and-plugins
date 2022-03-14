@@ -57,9 +57,9 @@ let &t_EI = "\<esc>[2 q"  " steady block in normal mode
 let &t_SR = "\<esc>[3 q"  " steady underline in replace mode
 let &t_SI = "\<esc>[6 q"  " steady I-beam in insert mode
 
-" Prevent word wrapping
+" Word wrapping
 
-set nowrap
+set wrap
 
 " Show file title in terminal window header
 
