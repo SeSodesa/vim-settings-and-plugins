@@ -96,8 +96,8 @@ set statusline+=%F
 set statusline+=%=
 set statusline+=\[%{&fileencoding?&fileencoding:&encoding}\]
 set statusline+=\[%{&fileformat}\]
-set statusline+=\ %p%%
-set statusline+=\ %l:%c
+set statusline+=\[%p%%\]
+set statusline+=\[%l:%c:%L\]
 
 " Always show status bar
 set laststatus=2
