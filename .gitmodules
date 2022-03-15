@@ -55,3 +55,6 @@
 [submodule "pack/plugins/start/vim-matlab"]
 	path = pack/plugins/start/vim-matlab
 	url = git@github.com:andymass/vim-matlab.git
+[submodule "pack/colors/opt/everforest"]
+	path = pack/colors/opt/everforest
+	url = git@github.com:sainnhe/everforest.git
