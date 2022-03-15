@@ -194,13 +194,13 @@ syntax on
 " set background=light " for the light version of vim-one
 " colorscheme one
 
-" → tokyonight-vim
-packadd! tokyonight-vim
-set termguicolors
-"let g:tokyonight_style = 'night'
-let g:tokyonight_style = 'storm'
-let g:tokyonight_enable_italic = 1
-colorscheme tokyonight
+" " → tokyonight-vim
+" packadd! tokyonight-vim
+" set termguicolors
+" "let g:tokyonight_style = 'night'
+" let g:tokyonight_style = 'storm'
+" let g:tokyonight_enable_italic = 1
+" colorscheme tokyonight
 
 " → Sonokai
 " packadd! sonokai
@@ -210,6 +210,27 @@ colorscheme tokyonight
 " packadd! papercolor-theme
 " set background=light
 " colorscheme PaperColor
+
+" → everforest
+
+packadd! everforest
+
+" Important!!
+
+if has('termguicolors')
+  set termguicolors
+endif
+
+" For light version.
+
+set background=light
+
+" Set contrast.
+" This configuration option should be placed before `colorscheme everforest`.
+" Available values: 'hard', 'medium'(default), 'soft'
+let g:everforest_background = 'hard'
+
+colorscheme everforest
 
 " -----------------------------------------------------------------------------
 " A.L.E
