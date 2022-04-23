@@ -11,6 +11,12 @@ set encoding=utf-8
 
 set nocompatible
 
+" Change cursor when changing modes
+
+let &t_EI = "\<esc>[2 q"  " steady block in normal mode
+let &t_SR = "\<esc>[3 q"  " steady underline in replace mode
+let &t_SI = "\<esc>[6 q"  " steady I-beam in insert mode
+
 " Filetype detection, indentation scripts and filetype plugins on
 
 filetype plugin indent on
@@ -50,12 +56,6 @@ function! Preserve(command)
 endfunction
 
 autocmd BufWritePre * call Preserve("%s/\\s\\+$//e")
-
-" Change cursor when changing modes
-
-let &t_EI = "\<esc>[2 q"  " steady block in normal mode
-let &t_SR = "\<esc>[3 q"  " steady underline in replace mode
-let &t_SI = "\<esc>[6 q"  " steady I-beam in insert mode
 
 " Word wrapping
 
