@@ -185,36 +185,16 @@ autocmd Filetype svg setlocal sw=2 ts=2 sts=2
 autocmd Filetype json setlocal sw=2 ts=2 sts=2
 
 " -----------------------------------------------------------------------------
+"  Matlab
+
+autocmd Filetype matlab setlocal expandtab sw=4 ts=4 sts=4
+
+" -----------------------------------------------------------------------------
 " Choose color theme
 
 " Set syntax highlighting on
 
 syntax on
-
-" → onedark.vim
-" packadd! onedark.vim
-"packadd! vim-one
-" → onedark
-" set background=dark " for the dark version of vim-one
-" set background=light " for the light version of vim-one
-" colorscheme one
-
-" " → tokyonight-vim
-" packadd! tokyonight-vim
-" set termguicolors
-" "let g:tokyonight_style = 'night'
-" let g:tokyonight_style = 'storm'
-" let g:tokyonight_enable_italic = 1
-" colorscheme tokyonight
-
-" → Sonokai
-" packadd! sonokai
-" colorscheme sonokai
-
-" → PaperColor
-" packadd! papercolor-theme
-" set background=light
-" colorscheme PaperColor
 
 " → everforest
 
