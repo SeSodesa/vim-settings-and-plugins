@@ -25,4 +25,4 @@ submodules is done with
 git submodule update --init --recursive
 ```
 The addons currently found in this repository under `pack` should then start
-working automatically, once vim is restarted.
+working automatically, once Vim is restarted.
