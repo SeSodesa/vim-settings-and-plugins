@@ -92,10 +92,13 @@ if &background == dark && &t_Co >= 16
 	call ColorFn("Cursor", white, black, none)
 	call ColorFn("CursorIM", white, black, none)
 	call ColorFn("Directory", none, brgreen, none)
-	" hi DiffAdd
-	" hi DiffChange
-	" hi DiffDelete
-	" hi DiffText
+	call ColorFn("DiffAdd", none, brgreen, none)
+	call ColorFn("DiffChange", none, bryellow, none)
+	call ColorFn("DiffDelete", none, brred, none)
+	call ColorFn("diffRemoved", none, brred, none)
+	call ColorFn("diffChanged", none, bryellow, none)
+	call ColorFn("diffAdded", none, brgreen, none)
+	hi link DiffText Normal
 	call ColorFn("ErrorMsg", red, white, none)
 	" hi VertSplit
 	" hi Folded
@@ -144,10 +147,13 @@ elseif &background == light && &t_Co >= 16
 	call ColorFn("Cursor", white, black, none)
 	call ColorFn("CursorIM", white, black, none)
 	call ColorFn("Directory", none, green, none)
-	" hi DiffAdd
-	" hi DiffChange
-	" hi DiffDelete
-	" hi DiffText
+	call ColorFn("DiffAdd", none, green, none)
+	call ColorFn("DiffChange", none, yellow, none)
+	call ColorFn("DiffDelete", none, red, none)
+	call ColorFn("diffRemoved", none, red, none)
+	call ColorFn("diffChanged", none, yellow, none)
+	call ColorFn("diffAdded", none, green, none)
+	hi link DiffText Normal
 	call ColorFn("ErrorMsg", red, white, none)
 	" hi VertSplit
 	" hi Folded
