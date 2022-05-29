@@ -91,7 +91,7 @@ set numberwidth=2
 " Show status bar with the color of CursorColumn
 
 set statusline=
-set statusline+=%#CursorColumn#
+set statusline+=%#StatusLine#
 set statusline+=%F
 set statusline+=%=
 set statusline+=\[%{&fileencoding?&fileencoding:&encoding}\]
@@ -196,26 +196,26 @@ autocmd Filetype matlab setlocal expandtab sw=4 ts=4 sts=4
 
 syntax on
 
-" → everforest
+" " → everforest
+"
+" packadd! everforest
+"
+" " Important!!
+"
+" if has('termguicolors')
+"   set termguicolors
+" endif
+"
+" " For light version.
+"
+" set background=light
+"
+" " Set contrast.
+" " This configuration option should be placed before `colorscheme everforest`.
+" " Available values: 'hard', 'medium'(default), 'soft'
+" let g:everforest_background = 'hard'
 
-packadd! everforest
-
-" Important!!
-
-if has('termguicolors')
-  set termguicolors
-endif
-
-" For light version.
-
-set background=light
-
-" Set contrast.
-" This configuration option should be placed before `colorscheme everforest`.
-" Available values: 'hard', 'medium'(default), 'soft'
-let g:everforest_background = 'hard'
-
-colorscheme everforest
+colorscheme santun_värit
 
 " -----------------------------------------------------------------------------
 " A.L.E
