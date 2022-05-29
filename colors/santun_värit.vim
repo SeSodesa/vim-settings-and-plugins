@@ -2,8 +2,12 @@
 "
 " To actually make this look good and not burn your eyes, please adjust the
 " colors 0–15 in your terminal emulator itself, especially the color 0 (black)
-" to a shade of dark gray. The idea is to make the colors look consistent
-" between different environments by restricting the number of colors.
+" to a shade of dark gray. In addition, set the background color with
+"
+"     set background=(light|dark)
+"
+" in your vimrc file. The idea is to make the colors look consistent between
+" different environments by restricting the number of colors.
 "
 " Maintainer:   Santtu Söderholm <santtu.soderholm@protonmail.com>
 " Last Change: 2022-05-28
@@ -57,12 +61,10 @@ let term = "term"
 let bg = "bg"
 let fg = "fg"
 
-"" Choose background color
+"" Choose background color outside of the file.
 
 let dark = "dark"
 let light = "light"
-
-set background=light
 
 "" Clear all highlighting
 
@@ -98,7 +100,6 @@ if &background == dark && &t_Co >= 16
 	call ColorFn("diffRemoved", none, brred, none)
 	call ColorFn("diffChanged", none, bryellow, none)
 	call ColorFn("diffAdded", none, brgreen, none)
-	hi link DiffText Normal
 	call ColorFn("ErrorMsg", red, white, none)
 	" hi VertSplit
 	" hi Folded
@@ -153,7 +154,6 @@ elseif &background == light && &t_Co >= 16
 	call ColorFn("diffRemoved", none, red, none)
 	call ColorFn("diffChanged", none, yellow, none)
 	call ColorFn("diffAdded", none, green, none)
-	hi link DiffText Normal
 	call ColorFn("ErrorMsg", red, white, none)
 	" hi VertSplit
 	" hi Folded
@@ -196,3 +196,7 @@ else " TODO: assume only 8 available colors
 	" Do nothing
 
 endif
+
+" Link common colors
+
+hi link DiffText Normal
