@@ -196,6 +196,10 @@ autocmd Filetype matlab setlocal expandtab sw=4 ts=4 sts=4
 
 syntax on
 
+" Choose background colorscheme (dark|light)
+
+set background=dark
+
 " " → everforest
 "
 " packadd! everforest
