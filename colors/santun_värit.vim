@@ -1,0 +1,192 @@
+""" A 16-bit Vim color file
+"
+" To actually make this look good and not burn your eyes, please adjust the
+" colors 0–15 in your terminal emulator itself, especially the color 0 (black)
+" to a shade of dark gray. The idea is to make the colors look consistent
+" between different environments by restricting the number of colors.
+"
+" Maintainer:   Santtu Söderholm <santtu.soderholm@protonmail.com>
+" Last Change: 2022-05-28
+"
+" Related help screens:
+"
+" :h group-name
+" :h highlight-groups
+" :h cterm-colors
+
+" ColorFn colors cterm colors and sets text shape.
+
+function! ColorFn(group, bg, fg, shape)
+
+	let highlightstr = 'highlight ' . a:group . ' '
+	let highlightstr .= 'ctermbg=' . a:bg . ' '
+	let highlightstr .= 'ctermfg=' . a:fg . ' '
+	let highlightstr .= 'cterm=' . a:shape . ' '
+	let highlightstr .= 'term=' . a:shape . ' '
+
+	execute highlightstr
+
+endfunction
+
+" Map color names to numbers (normal and bright variants)
+
+let black    = 0
+let red      = 1
+let green    = 2
+let yellow   = 3
+let blue     = 4
+let purple   = 5
+let cyan     = 6
+let white    = 7
+let brblack  = 8
+let brred    = 9
+let brgreen  = 10
+let bryellow = 11
+let brblue   = 12
+let brpurple = 13
+let brcyan   = 14
+let brwhite  = 15
+
+" A null variable and other text shapes
+
+let none = "none"
+let bold = "bold"
+let underline = "underline"
+let reverse = "reverse"
+let term = "term"
+let bg = "bg"
+let fg = "fg"
+
+"" Choose background color
+
+let dark = "dark"
+let light = "light"
+
+set background=light
+
+"" Clear all highlighting
+
+highlight clear
+
+if exists("syntax_on")
+	syntax reset
+endif
+
+" Name of this color scheme
+
+let g:colors_name="santun_värit"
+
+"" Color selection
+"
+" Choose colors based on background color flag and the number of colors
+" available to the terminal.
+
+if &background == dark && &t_Co >= 16
+
+	call ColorFn("Normal", black, white, none)
+	call ColorFn("LineNr", black, brgreen, none)
+	call ColorFn("MatchParen", bryellow, purple, none)
+
+	"" User interface color settings.
+
+	call ColorFn("Cursor", white, black, none)
+	call ColorFn("CursorIM", white, black, none)
+	call ColorFn("Directory", none, brgreen, none)
+	" hi DiffAdd
+	" hi DiffChange
+	" hi DiffDelete
+	" hi DiffText
+	call ColorFn("ErrorMsg", red, white, none)
+	" hi VertSplit
+	" hi Folded
+	" hi FoldColumn
+	call ColorFn("IncSearch", none, black, none)
+	" hi ModeMsg
+	" hi MoreMsg
+	call ColorFn("NonText", none, brblack, none)
+	" hi Question
+	call ColorFn("Search", green, black, none)
+	call ColorFn("SpecialKey", none, brblack, none)
+	call ColorFn("Search", none, green, none)
+	call ColorFn("StatusLine", brgreen, black, none)
+	call ColorFn("StatusLineNC", bryellow, black, none)
+	call ColorFn("Title", none, brred, none)
+	call ColorFn("Visual", brwhite, black, none)
+	" hi VisualNOS
+	call ColorFn("WarningMsg", bryellow, black, none)
+	" hi WildMenu
+	" hi Menu
+	" hi Scrollbar
+	" hi Tooltip
+
+	"" Syntax highlighting groups
+
+	call ColorFn("Comment", none, brcyan, none)
+	call ColorFn("Constant", none, brgreen, none)
+	call ColorFn("Identifier", none, brred, none)
+	call ColorFn("Statement", none, brpurple, none)
+	call ColorFn("PreProc", none, brpurple, none)
+	call ColorFn("Type", none, brred, none)
+	call ColorFn("Special", none, brgreen, none)
+	call ColorFn("Underlined", none, brcyan, none)
+	call ColorFn("Ignore", none, bryellow, none)
+	call ColorFn("Error", red, white, none)
+	call ColorFn("Todo", none, bryellow, none)
+
+elseif &background == light && &t_Co >= 16
+
+	call ColorFn("Normal", white, black, none)
+	call ColorFn("LineNr", white, black, none)
+	call ColorFn("MatchParen", yellow, purple, none)
+
+	"" User interface color settings.
+
+	call ColorFn("Cursor", white, black, none)
+	call ColorFn("CursorIM", white, black, none)
+	call ColorFn("Directory", none, green, none)
+	" hi DiffAdd
+	" hi DiffChange
+	" hi DiffDelete
+	" hi DiffText
+	call ColorFn("ErrorMsg", red, white, none)
+	" hi VertSplit
+	" hi Folded
+	" hi FoldColumn
+	call ColorFn("IncSearch", none, black, none)
+	" hi ModeMsg
+	" hi MoreMsg
+	call ColorFn("NonText", none, brblack, none)
+	" hi Question
+	call ColorFn("Search", green, black, none)
+	call ColorFn("SpecialKey", none, black, none)
+	call ColorFn("Search", none, green, none)
+	call ColorFn("StatusLine", green, black, none)
+	call ColorFn("StatusLineNC", yellow, black, none)
+	call ColorFn("Title", none, red, none)
+	call ColorFn("Visual", brblack, white, none)
+	" hi VisualNOS
+	call ColorFn("WarningMsg", yellow, black, none)
+	" hi WildMenu
+	" hi Menu
+	" hi Scrollbar
+	" hi Tooltip
+
+	"" Syntax highlighting groups
+
+	call ColorFn("Comment", none, cyan, none)
+	call ColorFn("Constant", none, green, none)
+	call ColorFn("Identifier", none, red, none)
+	call ColorFn("Statement", none, purple, none)
+	call ColorFn("PreProc", none, purple, none)
+	call ColorFn("Type", none, red, none)
+	call ColorFn("Special", none, green, none)
+	call ColorFn("Underlined", none, cyan, none)
+	call ColorFn("Ignore", none, yellow, none)
+	call ColorFn("Error", red, white, none)
+	call ColorFn("Todo", none, red, none)
+
+else " TODO: assume only 8 available colors
+
+	" Do nothing
+
+endif
