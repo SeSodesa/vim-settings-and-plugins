@@ -97,7 +97,7 @@ set statusline+=%=
 set statusline+=\[%{&fileencoding?&fileencoding:&encoding}\]
 set statusline+=\[%{&fileformat}\]
 set statusline+=\[%p%%\]
-set statusline+=\[%l:%c:%L\]
+set statusline+=\[%l/%L:%c\]
 
 " Always show status bar
 
