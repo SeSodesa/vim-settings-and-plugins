@@ -1,6 +1,3 @@
-[submodule "pack/plugins/start/vim-latex"]
-	path = pack/plugins/start/vim-latex
-	url = https://github.com/vim-latex/vim-latex.git
 [submodule "pack/plugins/start/ale"]
 	path = pack/plugins/start/ale
 	url = https://github.com/dense-analysis/ale.git
