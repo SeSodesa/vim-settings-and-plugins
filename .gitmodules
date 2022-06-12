@@ -46,3 +46,6 @@
 [submodule "pack/colors/opt/everforest"]
 	path = pack/colors/opt/everforest
 	url = https://github.com/sainnhe/everforest.git
+[submodule "pack/plugins/start/vimtex"]
+	path = pack/plugins/start/vimtex
+	url = https://github.com/lervag/vimtex.git
