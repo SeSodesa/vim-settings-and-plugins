@@ -109,9 +109,8 @@ if &background == dark && &t_Co >= 16
 	" hi MoreMsg
 	call ColorFn("NonText", none, brblack, none)
 	" hi Question
-	call ColorFn("Search", green, black, none)
+	call ColorFn("Search", bryellow, black, none)
 	call ColorFn("SpecialKey", none, brblack, none)
-	call ColorFn("Search", none, green, none)
 	call ColorFn("StatusLine", brgreen, black, none)
 	call ColorFn("StatusLineNC", bryellow, black, none)
 	call ColorFn("Title", none, brred, none)
