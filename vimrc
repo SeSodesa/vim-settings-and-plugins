@@ -80,6 +80,10 @@ set nojoinspaces
 
 set backspace=indent,eol,start
 
+" Highlight searched patterns
+
+set hlsearch
+
 " Displays line numbers
 
 set number
