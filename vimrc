@@ -196,7 +196,7 @@ autocmd Filetype json setlocal sw=2 ts=2 sts=2
 " -----------------------------------------------------------------------------
 "  Matlab
 
-autocmd Filetype matlab setlocal expandtab sw=4 ts=4 sts=4
+autocmd Filetype matlab setlocal expandtab sw=4 ts=4 sts=4 nowrap
 
 " -----------------------------------------------------------------------------
 " Choose color theme
