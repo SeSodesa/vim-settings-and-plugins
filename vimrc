@@ -84,6 +84,10 @@ set backspace=indent,eol,start
 
 set hlsearch
 
+" Prevent moving of cursor when searching for word under it.
+
+nnoremap * *N
+
 " Displays line numbers
 
 set number
