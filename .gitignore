@@ -5,7 +5,9 @@
 # Allow specific files.
 
 !.gitignore
+!.gitmodules
 !.gitattributes
+
 !vimrc
 
 !colors/santun_värit.vim
