@@ -1,3 +1,17 @@
-# Ignore Vim swap files
-*.swp
-*.netrwhist
+# Disallow everything.
+
+*
+
+# Allow specific files.
+
+!.gitignore
+!.gitattributes
+!vimrc
+
+!colors/santun_värit.vim
+
+# Allow file types in subdirectories.
+
+!**/
+!README.md
+!*.vim
