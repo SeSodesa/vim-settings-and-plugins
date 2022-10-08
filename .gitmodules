@@ -39,7 +39,7 @@
 	url = https://github.com/rkaminsk/vim-syntax-clingo.git
 [submodule "pack/plugins/start/vim-matlab"]
 	path = pack/plugins/start/vim-matlab
-	url = https://github.com/andymass/vim-matlab.git
+	url = https://github.com/SeSodesa/vim-matlab.git
 [submodule "pack/colors/opt/everforest"]
 	path = pack/colors/opt/everforest
 	url = https://github.com/sainnhe/everforest.git
