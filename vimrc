@@ -46,7 +46,7 @@ set list
 
 " Removes trailing whitespace on save, preserving cursor state
 
-function! Preserve(command)
+function! PreserveCursorPositionWithCommand(command)
 	" Save current view.
 	let current_view = winsaveview()
 	" Execute input command without modifying command history
@@ -55,7 +55,7 @@ function! Preserve(command)
 	call winrestview(current_view)
 endfunction
 
-autocmd BufWritePre * call Preserve("%s/\\s\\+$//e")
+autocmd BufWritePre * call PreserveCursorPositionWithCommand("%s/\\s\\+$//e")
 
 " Word wrapping
 
