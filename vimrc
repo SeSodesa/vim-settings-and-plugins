@@ -164,9 +164,15 @@ let g:tex_flavor='latex'
 
 " Disable all LaTeΧ code folding
 
-:let Tex_FoldedSections=""
-:let Tex_FoldedEnvironments=""
-:let Tex_FoldedMisc=""
+let Tex_FoldedSections=""
+let Tex_FoldedEnvironments=""
+let Tex_FoldedMisc=""
+
+" VimTeX features.
+
+let g:vimtex_compiler_enabled=0
+let g:vimtex_syntax_conceal_disable=1
+let g:vimtex_view_enabled=0
 
 " -----------------------------------------------------------------------------
 " Julia
