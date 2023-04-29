@@ -46,3 +46,6 @@
 [submodule "pack/plugins/start/vimtex"]
 	path = pack/plugins/start/vimtex
 	url = https://github.com/lervag/vimtex.git
+[submodule "pack/plugins/start/zig.vim"]
+	path = pack/plugins/start/zig.vim
+	url = https://github.com/ziglang/zig.vim
