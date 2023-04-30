@@ -205,6 +205,8 @@ autocmd Filetype matlab setlocal expandtab sw=4 ts=4 sts=4 nowrap
 
 " Zig
 
+autocmd Filetype zig setlocal expandtab sw=4 ts=4 sts=4 nowrap
+
 let g:zig_fmt_autosave = 0
 
 " -----------------------------------------------------------------------------
