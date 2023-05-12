@@ -41,6 +41,7 @@
 [submodule "pack/plugins/start/vim-matlab"]
 	path = pack/plugins/start/vim-matlab
 	url = https://github.com/SeSodesa/vim-matlab.git
+	branch = master
 [submodule "pack/colors/opt/everforest"]
 	path = pack/colors/opt/everforest
 	url = https://github.com/sainnhe/everforest.git
