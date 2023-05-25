@@ -161,20 +161,11 @@ autocmd FileType * set tabstop=4 shiftwidth=4 noexpandtab autoindent textwidth=7
 " -----------------------------------------------------------------------------
 " LaTeX
 
-let g:latex_indent_enabled = 1
-let g:latex_fold_envs = 0
-let g:latex_fold_sections = []
-
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
+
 let g:tex_flavor='latex'
-
-" Disable all LaTeΧ code folding
-
-let Tex_FoldedSections=""
-let Tex_FoldedEnvironments=""
-let Tex_FoldedMisc=""
 
 " VimTeX features.
 
