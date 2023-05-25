@@ -33,7 +33,13 @@ set completeopt-=preview
 
 set nobackup nowritebackup noswapfile
 
-set swapsync=
+if ! has ( "nvim" )
+
+	" This only exists in Vim.
+
+	set swapsync=
+
+endif
 
 " Check for and reload external changes when Vim or the current buffer gains
 " focus, and optionally, auto-save when leaving focus.
