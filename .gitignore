@@ -12,6 +12,8 @@
 
 !colors/santun_värit.vim
 
+!link-neovim.sh
+
 # Allow file types in subdirectories.
 
 !**/
