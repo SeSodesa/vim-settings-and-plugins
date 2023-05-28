@@ -167,11 +167,24 @@ autocmd FileType * set tabstop=4 shiftwidth=4 noexpandtab autoindent textwidth=7
 
 let g:tex_flavor='latex'
 
-" VimTeX features.
+""" VimTeX features.
+
+" Disable possibility of running a LaTeΧ compiler from within Vim.
 
 let g:vimtex_compiler_enabled=0
+
+" Disable all conceal features at once and without mercy.
+
 let g:vimtex_syntax_conceal_disable=1
+
+" Do not use Vim to view PDF files. This is better done with external
+" programs.
+
 let g:vimtex_view_enabled=0
+
+" Disable repeated calls to kpsewhich, when using symbol completion.
+
+let g:vimtex_include_search_enabled=0
 
 " -----------------------------------------------------------------------------
 " Julia
