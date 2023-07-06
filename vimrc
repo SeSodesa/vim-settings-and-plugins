@@ -155,7 +155,7 @@ inoremap <expr> <Up> v:count ? '<Up>' : '<C-o>gk'
 " -----------------------------------------------------------------------------
 " Default settings for files
 
-autocmd FileType * set tabstop=4 shiftwidth=4 noexpandtab autoindent textwidth=78
+autocmd FileType * set tabstop=4 shiftwidth=4 noexpandtab autoindent textwidth=0
 
 
 " -----------------------------------------------------------------------------
