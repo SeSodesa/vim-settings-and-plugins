@@ -52,7 +52,8 @@ autocmd FocusLost,WinLeave * :silent! w
 set listchars=tab:──┤,trail:·,extends:→,precedes:←,nbsp:␣
 set list
 
-" Removes trailing whitespace on save, preserving cursor state
+" Removes trailing whitespace (except with Markdown files) on save, preserving
+" cursor state.
 
 function! PreserveCursorPositionWithCommand(command)
 	" Save current view.
@@ -63,7 +64,11 @@ function! PreserveCursorPositionWithCommand(command)
 	call winrestview(current_view)
 endfunction
 
-autocmd BufWritePre * call PreserveCursorPositionWithCommand("%s/\\s\\+$//e")
+augroup mywritepre | au!
+	autocmd BufWritePre * if &filetype != 'markdown'
+	autocmd BufWritePre *     call PreserveCursorPositionWithCommand("%s/\\s\\+$//e")
+	autocmd BufWritePre * endif
+augroup end
 
 " Word wrapping
 
@@ -156,7 +161,6 @@ inoremap <expr> <Up> v:count ? '<Up>' : '<C-o>gk'
 " Default settings for files
 
 autocmd FileType * set tabstop=4 shiftwidth=4 noexpandtab autoindent textwidth=0
-
 
 " -----------------------------------------------------------------------------
 " LaTeX
