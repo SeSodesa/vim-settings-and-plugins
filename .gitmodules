@@ -22,6 +22,7 @@
 [submodule "pack/plugins/start/yats.vim"]
 	path = pack/plugins/start/yats.vim
 	url = https://github.com/HerringtonDarkholme/yats.vim.git
+	branch = master
 [submodule "pack/plugins/start/rust.vim"]
 	path = pack/plugins/start/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
