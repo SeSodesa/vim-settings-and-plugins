@@ -70,6 +70,10 @@ augroup mywritepre | au!
 	autocmd BufWritePre * endif
 augroup end
 
+"" A manual command for deleting trailing whitespace.
+
+command Dtws call PreserveCursorPositionWithCommand("%s/\\s\\+$//e")
+
 " Word wrapping
 
 set wrap
