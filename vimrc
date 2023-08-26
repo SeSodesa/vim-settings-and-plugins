@@ -17,6 +17,10 @@ let &t_EI = "\<esc>[2 q"  " steady block in normal mode
 let &t_SR = "\<esc>[3 q"  " steady underline in replace mode
 let &t_SI = "\<esc>[6 q"  " steady I-beam in insert mode
 
+" Keep cursor horizontally in the middle when scrolling to the right on lines that extend past the screen.
+
+set sidescrolloff=999
+
 " Filetype detection, indentation scripts and filetype plugins on
 
 filetype plugin indent on
