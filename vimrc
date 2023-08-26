@@ -17,9 +17,16 @@ let &t_EI = "\<esc>[2 q"  " steady block in normal mode
 let &t_SR = "\<esc>[3 q"  " steady underline in replace mode
 let &t_SI = "\<esc>[6 q"  " steady I-beam in insert mode
 
-" Keep cursor horizontally in the middle when scrolling to the right on lines that extend past the screen.
+" Set this to a large number to keep cursor horizontally in the middle when
+" scrolling to the right on lines that extend past the screen.
 
-set sidescrolloff=999
+set sidescrolloff=0
+
+" How many characters the screen jumps  horizontally, when the cursor moves
+" past sidescrolloff. If this is a large number, screen movement seems janky,
+" but a small value might be an issue for slower terminals.
+
+set sidescroll=1
 
 " Filetype detection, indentation scripts and filetype plugins on
 
