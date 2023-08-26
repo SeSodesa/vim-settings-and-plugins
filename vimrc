@@ -20,7 +20,7 @@ let &t_SI = "\<esc>[6 q"  " steady I-beam in insert mode
 " Set this to a large number to keep cursor horizontally in the middle when
 " scrolling to the right on lines that extend past the screen.
 
-set sidescrolloff=0
+set sidescrolloff=15
 
 " How many characters the screen jumps  horizontally, when the cursor moves
 " past sidescrolloff. If this is a large number, screen movement seems janky,
