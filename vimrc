@@ -28,6 +28,12 @@ set sidescrolloff=15
 
 set sidescroll=1
 
+" Do a similar thing for vertical scrolling.
+
+set scrolloff=5
+
+set scroll=1
+
 " Filetype detection, indentation scripts and filetype plugins on
 
 filetype plugin indent on
