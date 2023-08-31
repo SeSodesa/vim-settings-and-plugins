@@ -32,7 +32,7 @@ set sidescroll=1
 
 set scrolloff=5
 
-set scroll=1
+" set scroll=20
 
 " Filetype detection, indentation scripts and filetype plugins on
 
