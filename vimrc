@@ -1,5 +1,4 @@
-" =============================================================================
-" General settings
+""" General settings
 
 " Set encoding to the one to rule them all
 
@@ -183,8 +182,7 @@ inoremap <expr> <Up> v:count ? '<Up>' : '<C-o>gk'
 
 autocmd FileType * set tabstop=4 shiftwidth=4 noexpandtab autoindent textwidth=0
 
-" -----------------------------------------------------------------------------
-" LaTeX
+""" LaTeX
 
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
@@ -211,45 +209,43 @@ let g:vimtex_view_enabled=0
 
 let g:vimtex_include_search_enabled=0
 
-" -----------------------------------------------------------------------------
-" Julia
+""" Julia
 
 " Activates the julia-vim unicode completions for all file types
 " Warning: overrides omnifunc settings for all file types when done like this
 
 let g:latex_to_unicode_file_types = ".*"
 
-" -----------------------------------------------------------------------------
-" Javascript
+""" Javascript
 
 autocmd FileType javascript setlocal sw=2 ts=2 sts=2
 autocmd FileType vue setlocal sw=2 ts=2 sts=2
 
-" -----------------------------------------------------------------------------
-" SVG
+""" SVG
 
 autocmd Filetype svg setlocal sw=2 ts=2 sts=2
 
-" -----------------------------------------------------------------------------
-" JSON
+""" JSON
 
 autocmd Filetype json setlocal sw=2 ts=2 sts=2
 
-" -----------------------------------------------------------------------------
-"  Matlab
+"""  Matlab
 
 autocmd Filetype matlab setlocal expandtab sw=4 ts=4 sts=4 nowrap
 
-" Zig
+"" Zig
 
 autocmd Filetype zig setlocal expandtab sw=4 ts=4 sts=4 nowrap
 
 let g:zig_fmt_autosave = 0
 
-" -----------------------------------------------------------------------------
-" Choose color theme
+"" Haskell
 
-" Set syntax highlighting on
+autocmd Filetype haskell setlocal expandtab sw=4 ts=4 sts=4 nowrap
+
+""" Choose color theme
+
+""" Set syntax highlighting on
 
 syntax on
 
@@ -278,8 +274,7 @@ set background=dark
 
 colorscheme santun_värit
 
-" -----------------------------------------------------------------------------
-" A.L.E
+""" A.L.E
 
 let g:ale_linters = {'rust' : ['analyzer']}
 let g:ale_rust_rls_toolchain = 'stable'
@@ -287,8 +282,7 @@ let g:ale_completion_enabled = 1
 let g:ale_cpp_cc_options = '-std=c++17 -Wall'
 let g:ale_enabled = 0
 
-" -----------------------------------------------------------------------------
-" Netrw
+""" Netrw
 
 " Use list style directory view
 
