@@ -33,6 +33,10 @@ set scrolloff=5
 
 " set scroll=20
 
+" Horizontal splits open below and vertical splits open to the right.
+
+set splitbelow splitright
+
 " Filetype detection, indentation scripts and filetype plugins on
 
 filetype plugin indent on
