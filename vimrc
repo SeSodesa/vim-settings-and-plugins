@@ -1,14 +1,24 @@
-""" General settings
+""" vimrc
+"
+" This file is for adjusting Vim-related settings. It is loaded every time Vim
+" starts up.
+"
 
 " Set encoding to the one to rule them all
 
 set fileencodings=utf-8
+
 set encoding=utf-8
 
 " A compatibility flag for Ubuntu terminal.
 " Allows the arrow keys to work as in other text editors.
 
 set nocompatible
+
+" Insert empty lines with Enter and Shift + Enter.
+
+map <Enter> o<ESC>
+map <S-Enter> O<ESC>
 
 " Change cursor when changing modes
 
