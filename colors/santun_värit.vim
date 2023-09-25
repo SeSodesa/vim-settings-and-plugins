@@ -87,7 +87,7 @@ if &background == dark && &t_Co >= 16
 
 	call ColorFn("Normal", black, white, none)
 	call ColorFn("LineNr", black, brgreen, none)
-	call ColorFn("MatchParen", bryellow, purple, none)
+	call ColorFn("MatchParen", white, brblack, none)
 
 	"" User interface color settings.
 
@@ -140,13 +140,13 @@ elseif &background == light && &t_Co >= 16
 
 	call ColorFn("Normal", white, black, none)
 	call ColorFn("LineNr", white, black, none)
-	call ColorFn("MatchParen", yellow, purple, none)
+	call ColorFn("MatchParen", brblack, white, none)
 
 	"" User interface color settings.
 
-	call ColorFn("Cursor", white, black, none)
+	call ColorFn("Cursor", black, white, none)
 	call ColorFn("CursorIM", white, black, none)
-	call ColorFn("Directory", none, green, none)
+	call ColorFn("Directory", none, purple, none)
 	call ColorFn("DiffAdd", none, green, none)
 	call ColorFn("DiffChange", none, yellow, none)
 	call ColorFn("DiffDelete", none, red, none)
@@ -161,14 +161,14 @@ elseif &background == light && &t_Co >= 16
 	" hi ModeMsg
 	" hi MoreMsg
 	call ColorFn("NonText", none, brblack, none)
-	" hi Question
+	call ColorFn("Parens", none, black, bold)
 	call ColorFn("Search", green, black, none)
 	call ColorFn("SpecialKey", none, black, none)
-	call ColorFn("Search", none, green, none)
+	call ColorFn("Search", black, white, none)
 	call ColorFn("StatusLine", green, black, none)
 	call ColorFn("StatusLineNC", yellow, black, none)
 	call ColorFn("Title", none, red, none)
-	call ColorFn("Visual", brblack, white, none)
+	call ColorFn("Visual", black, white, none)
 	" hi VisualNOS
 	call ColorFn("WarningMsg", yellow, black, none)
 	" hi WildMenu
@@ -179,12 +179,12 @@ elseif &background == light && &t_Co >= 16
 	"" Syntax highlighting groups
 
 	call ColorFn("Comment", none, cyan, none)
-	call ColorFn("Constant", none, green, none)
+	call ColorFn("Constant", none, brblack, none)
 	call ColorFn("Identifier", none, red, none)
 	call ColorFn("Statement", none, purple, none)
 	call ColorFn("PreProc", none, purple, none)
 	call ColorFn("Type", none, red, none)
-	call ColorFn("Special", none, green, none)
+	call ColorFn("Special", none, black, none)
 	call ColorFn("Underlined", none, cyan, none)
 	call ColorFn("Ignore", none, yellow, none)
 	call ColorFn("Error", red, white, none)
