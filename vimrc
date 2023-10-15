@@ -17,8 +17,8 @@ set nocompatible
 
 " Insert empty lines with Enter and Shift + Enter.
 
-map <Enter> o<ESC>
-map <S-Enter> O<ESC>
+noremap <Enter> o<ESC>
+noremap <BS>    O<ESC>
 
 " Change cursor when changing modes
 
