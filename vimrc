@@ -15,6 +15,15 @@ set encoding=utf-8
 
 set nocompatible
 
+" Recursive search into subfolders. Also activates fuzzy search for things like
+" :find and ^x^f.
+
+set path+=**
+
+" Display matching files when Tab-completing.
+
+set wildmenu
+
 " Insert empty lines with Enter and Shift + Enter.
 
 noremap <Enter> o<ESC>
