@@ -266,6 +266,10 @@ let g:zig_fmt_autosave = 0
 
 autocmd Filetype haskell setlocal expandtab sw=4 ts=4 sts=4 nowrap
 
+"" Lean
+
+autocmd FileType lean setlocal expandtab sw=4 ts=4 sts=4 nowrap
+
 """ Choose color theme
 
 """ Set syntax highlighting on
