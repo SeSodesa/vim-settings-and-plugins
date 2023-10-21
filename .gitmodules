@@ -53,6 +53,3 @@
 [submodule "pack/plugins/start/haskell-vim"]
 	path = pack/plugins/start/haskell-vim
 	url = https://github.com/neovimhaskell/haskell-vim.git
-[submodule "pack/plugins/start/lean.nvim"]
-	path = pack/plugins/start/lean.nvim
-	url = https://github.com/Julian/lean.nvim.git
