@@ -264,7 +264,7 @@ let g:zig_fmt_autosave = 0
 
 "" Haskell
 
-autocmd Filetype haskell setlocal expandtab sw=4 ts=4 sts=4 nowrap
+autocmd Filetype haskell setlocal expandtab sw=2 ts=2 sts=2 nowrap
 
 "" Lean
 
