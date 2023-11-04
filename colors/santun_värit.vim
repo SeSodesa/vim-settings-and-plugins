@@ -145,8 +145,8 @@ elseif &background == light && &t_Co >= 16
 	"" User interface color settings.
 
 	call ColorFn("Cursor", black, white, none)
-	call ColorFn("CursorIM", white, black, none)
-	call ColorFn("Directory", none, purple, none)
+	call ColorFn("CursorIM", black, white, none)
+	call ColorFn("Directory", none, black, bold)
 	call ColorFn("DiffAdd", none, green, none)
 	call ColorFn("DiffChange", none, yellow, none)
 	call ColorFn("DiffDelete", none, red, none)
@@ -161,11 +161,11 @@ elseif &background == light && &t_Co >= 16
 	" hi ModeMsg
 	" hi MoreMsg
 	call ColorFn("NonText", none, brblack, none)
-	call ColorFn("Parens", none, black, bold)
+	call ColorFn("Parens", none, black, none)
 	call ColorFn("Search", green, black, none)
 	call ColorFn("SpecialKey", none, black, none)
 	call ColorFn("Search", black, white, none)
-	call ColorFn("StatusLine", green, black, none)
+	call ColorFn("StatusLine", brblack, white, none)
 	call ColorFn("StatusLineNC", yellow, black, none)
 	call ColorFn("Title", none, red, none)
 	call ColorFn("Visual", black, white, none)
@@ -179,12 +179,12 @@ elseif &background == light && &t_Co >= 16
 	"" Syntax highlighting groups
 
 	call ColorFn("Comment", none, cyan, none)
-	call ColorFn("Constant", none, brblack, none)
-	call ColorFn("Identifier", none, red, none)
-	call ColorFn("Statement", none, purple, none)
-	call ColorFn("PreProc", none, purple, none)
-	call ColorFn("Type", none, red, none)
-	call ColorFn("Special", none, black, none)
+	call ColorFn("Constant", none, green, none)
+	call ColorFn("Identifier", none, black, bold)
+	call ColorFn("Statement", none, black, bold)
+	call ColorFn("PreProc", none, black, bold)
+	call ColorFn("Type", none, brblack, bold)
+	call ColorFn("Special", none, brblack, none)
 	call ColorFn("Underlined", none, cyan, none)
 	call ColorFn("Ignore", none, yellow, none)
 	call ColorFn("Error", red, white, none)
