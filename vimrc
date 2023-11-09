@@ -280,26 +280,9 @@ syntax on
 
 set background=dark
 
-" " → everforest
-"
-" packadd! everforest
-"
-" " Important!!
-"
-" if has('termguicolors')
-"   set termguicolors
-" endif
-"
-" " For light version.
-"
-" set background=light
-"
-" " Set contrast.
-" " This configuration option should be placed before `colorscheme everforest`.
-" " Available values: 'hard', 'medium'(default), 'soft'
-" let g:everforest_background = 'hard'
+set termguicolors
 
-colorscheme santun_värit
+colorscheme tokyonight
 
 """ A.L.E
 
