@@ -113,8 +113,8 @@ if &background == dark && &t_Co >= 16
 	call ColorFn("SpecialKey", none, brblack, none)
 	call ColorFn("StatusLine", brgreen, black, none)
 	call ColorFn("StatusLineNC", bryellow, black, none)
-	call ColorFn("Title", none, brred, none)
-	call ColorFn("Visual", brwhite, black, none)
+	call ColorFn("Title", none, black, bold)
+	call ColorFn("Visual", brblack, white, none)
 	" hi VisualNOS
 	call ColorFn("WarningMsg", bryellow, black, none)
 	" hi WildMenu
@@ -158,28 +158,25 @@ elseif &background == light && &t_Co >= 16
 	" hi Folded
 	" hi FoldColumn
 	call ColorFn("IncSearch", none, black, none)
-	" hi ModeMsg
-	" hi MoreMsg
-	call ColorFn("NonText", none, brblack, none)
+	call ColorFn("NonText", white, black, none)
 	call ColorFn("Parens", none, black, none)
 	call ColorFn("Search", green, black, none)
 	call ColorFn("SpecialKey", none, black, none)
 	call ColorFn("Search", black, white, none)
 	call ColorFn("StatusLine", brblack, white, none)
 	call ColorFn("StatusLineNC", yellow, black, none)
-	call ColorFn("Title", none, red, none)
+	call ColorFn("Title", none, black, none)
 	call ColorFn("Visual", black, white, none)
-	" hi VisualNOS
 	call ColorFn("WarningMsg", yellow, black, none)
-	" hi WildMenu
-	" hi Menu
+	call ColorFn("WildMenu", bryellow, black, none)
+	call ColorFn("Menu", brblack, white, none)
 	" hi Scrollbar
-	" hi Tooltip
+	call ColorFn("Tooltip", bryellow, black, none)
 
 	"" Syntax highlighting groups
 
-	call ColorFn("Comment", none, cyan, none)
-	call ColorFn("Constant", none, green, none)
+	call ColorFn("Comment", none, blue, none)
+	call ColorFn("Constant", none, black, none)
 	call ColorFn("Identifier", none, black, bold)
 	call ColorFn("Statement", none, black, bold)
 	call ColorFn("PreProc", none, black, bold)
@@ -188,7 +185,7 @@ elseif &background == light && &t_Co >= 16
 	call ColorFn("Underlined", none, cyan, none)
 	call ColorFn("Ignore", none, yellow, none)
 	call ColorFn("Error", red, white, none)
-	call ColorFn("Todo", none, red, none)
+	call ColorFn("Todo", none, black, bold)
 
 else " TODO: assume only 8 available colors
 
