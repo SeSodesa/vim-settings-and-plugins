@@ -15,6 +15,10 @@ set encoding=utf-8
 
 set nocompatible
 
+" Disable folding.
+
+set nofoldenable
+
 " Recursive search into subfolders. Also activates fuzzy search for things like
 " :find and ^x^f.
 
