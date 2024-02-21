@@ -119,7 +119,7 @@ command Dtws call PreserveCursorPositionWithCommand("%s/\\s\\+$//e")
 
 " Word wrapping
 
-set wrap
+set nowrap
 
 " Show file title in terminal window header
 
