@@ -282,11 +282,11 @@ syntax on
 
 " Choose background colorscheme (dark|light)
 
-set background=dark
+set background=light
 
 set termguicolors
 
-colorscheme tokyonight
+colorscheme lunaperche
 
 """ A.L.E
 
