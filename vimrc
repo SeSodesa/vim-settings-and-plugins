@@ -15,6 +15,10 @@ set encoding=utf-8
 
 set nocompatible
 
+" Add hyphen to intra-word characters.
+
+set iskeyword+=-
+
 " Disable folding.
 
 set nofoldenable
@@ -242,6 +246,10 @@ let g:vimtex_include_search_enabled=0
 " Warning: overrides omnifunc settings for all file types when done like this
 
 let g:latex_to_unicode_file_types = ".*"
+
+""" Python
+
+autocmd FileType python expandtab setlocal sw=4 ts=4 sts=4
 
 """ Javascript
 
