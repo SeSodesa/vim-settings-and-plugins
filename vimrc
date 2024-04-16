@@ -249,7 +249,7 @@ let g:latex_to_unicode_file_types = ".*"
 
 """ Python
 
-autocmd FileType python expandtab setlocal sw=4 ts=4 sts=4
+autocmd FileType python setlocal expandtab sw=4 ts=4 sts=4
 
 """ Javascript
 
