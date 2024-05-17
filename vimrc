@@ -32,7 +32,7 @@ set path+=**
 
 set wildmenu
 
-" Insert empty lines with Enter and Shift + Enter.
+" Insert empty lines with Enter and Backspace.
 
 noremap <Enter> o<ESC>
 noremap <BS>    O<ESC>
