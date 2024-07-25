@@ -37,11 +37,11 @@ set wildmenu
 noremap <Enter> o<ESC>
 noremap <BS>    O<ESC>
 
-" Change cursor when changing modes
+" Change cursor when changing modes (2 ↦ block, 3 ↦ underline, 6 ↦ I-beam)
 
-let &t_EI = "\<esc>[2 q"  " steady block in normal mode
-let &t_SR = "\<esc>[3 q"  " steady underline in replace mode
-let &t_SI = "\<esc>[6 q"  " steady I-beam in insert mode
+let &t_EI = "\<esc>[2 q"  " normal mode
+let &t_SR = "\<esc>[2 q"  " replace mode
+let &t_SI = "\<esc>[2 q"  " insert mode
 
 " Set this to a large number to keep cursor horizontally in the middle when
 " scrolling to the right on lines that extend past the screen.
