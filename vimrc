@@ -195,6 +195,10 @@ set nostartofline
 
 set linebreak
 
+" Auto-save files when text in them is changed.
+
+autocmd TextChanged,TextChangedI <buffer> silent write
+
 " Set movement to happen per screen-line when line wrapping is on
 
 nnoremap <expr> j v:count ? 'j' : 'gj'
@@ -281,6 +285,10 @@ autocmd Filetype haskell setlocal expandtab sw=2 ts=2 sts=2 nowrap
 "" Lean
 
 autocmd FileType lean setlocal expandtab sw=4 ts=4 sts=4 nowrap
+
+"" Typst
+
+autocmd FileType typst setlocal expandtab sw=2 ts=2 sts=2 nowrap
 
 """ Choose color theme
 
